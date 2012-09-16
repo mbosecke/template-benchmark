@@ -6,4 +6,5 @@ Simple template engine benchmark
 
 	git clone git://github.com/baryshev/template-benchmark.git
 	cd template-benchmark
+	npm install
 	node ./benchmark.js
