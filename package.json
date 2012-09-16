@@ -1,0 +1,16 @@
+{
+	"name" : "template-benchmark",
+	"version" : "0.1.0",
+	"author" : "Vadim M. Baryshev <vadimbaryshev@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/baryshev/template-benchmark.git"
+	},
+	"dependencies": {
+		"ect": "0.2.6",
+		"ejs": "0.8.2",
+		"eco": "1.1.0-rc-3",
+		"swig": "0.12.0",
+		"jade": "0.27.2"
+	}
+}
