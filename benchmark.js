@@ -19,7 +19,7 @@ var hogan = require('./hogan/hogan.js');
 
 var test = function(name, sample, cb) {
 	var i = 0;
-	var start = Date.now();
+	var start;
 	var done = function(error) {
 		i++;
 		if (i === count) {
@@ -28,6 +28,7 @@ var test = function(name, sample, cb) {
 		}
 	}
 	sample.prepare(data, function() {
+		start = Date.now();
 		for (var j = 0; j < count; j++) {
 			sample.step(done);
 		}
