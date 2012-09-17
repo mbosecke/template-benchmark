@@ -6,12 +6,19 @@ var tplData;
 
 module.exports.prepare = function (data, done) {
 	tplData = data;
-	compiled = dust.compileFn(str);
+
+	compiled = dust.compile(str, 'test');
+	dust.loadSource(compiled);	
+	
 	done();
 };
 
 module.exports.step = function (done) {
-	var html = compiled(tplData, function(err, html) {
-		done();
+	dust.render('test', tplData, function(err, html) {
+		if (!err) {
+			done();
+		} else {
+			throw "err";
+		}
 	});
 };
