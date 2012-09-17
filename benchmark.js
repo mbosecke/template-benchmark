@@ -16,6 +16,7 @@ var jade = require('./jade/jade.js');
 var eco = require('./eco/eco.js');
 var swig = require('./swig/swig.js');
 var hogan = require('./hogan/hogan.js');
+var dust = require('./dust/dust.js');
 
 var test = function(name, sample, cb) {
 	var i = 0;
@@ -39,6 +40,7 @@ var samples = [
 	{ name : 'Jade', sample : jade },
 	{ name : 'EJS', sample : ejs },
 	{ name : 'Eco', sample : eco },
+	{ name : 'Dust', sample : dust },
 	{ name : 'Swig', sample : swig },
 	{ name : 'Hogan.js', sample : hogan },
 	{ name : 'ECT', sample : ect }
