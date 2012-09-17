@@ -7,7 +7,7 @@
 		"url": "git://github.com/baryshev/template-benchmark.git"
 	},
 	"dependencies": {
-		"ect": "0.2.9",
+		"ect": "0.2.10",
 		"ejs": "0.8.2",
 		"eco": "1.1.0-rc-3",
 		"swig": "0.12.0",

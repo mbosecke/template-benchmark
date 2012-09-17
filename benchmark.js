@@ -35,12 +35,12 @@ var test = function(name, sample, cb) {
 };
 
 var samples = [
-	{ name : 'jade', sample : jade },
-	{ name : 'ejs', sample : ejs },
-	{ name : 'eco', sample : eco },
-	{ name : 'swig', sample : swig },
-	{ name : 'ect', sample : ect },
-	{ name : 'hogan', sample : hogan }
+	{ name : 'Jade', sample : jade },
+	{ name : 'EJS', sample : ejs },
+	{ name : 'Eco', sample : eco },
+	{ name : 'Swig', sample : swig },
+	{ name : 'Hogan.js', sample : hogan },
+	{ name : 'ECT', sample : ect }
 ];
 
 var runTests = function () {
