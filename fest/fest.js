@@ -1,19 +1,18 @@
-var fs = require('fs');
-var eco = require('eco');
+var fest = require('fest');
 var tplData;
 var compiled;
 
 module.exports.prepare = function (data, done) {
-	var str = fs.readFileSync(__dirname + '/tpl_escaped.eco', 'utf8');
+	var str = __dirname + '/tpl_escaped.fest';
 	tplData = data;
-	compiled = eco.compile(str);
+	compiled = (new Function('return ' + fest.compile(str, {beautify: false}) ))();
 	done();
 };
 
 module.exports.prepareUnescaped = function (data, done) {
-	var str = fs.readFileSync(__dirname + '/tpl_unescaped.eco', 'utf8');
+	var str = __dirname + '/tpl_unescaped.fest';
 	tplData = data;
-	compiled = eco.compile(str);
+	compiled = (new Function('return ' + fest.compile(str, {beautify: false}) ))();
 	done();
 };
 

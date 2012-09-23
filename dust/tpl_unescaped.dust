@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>{title|s}</title>
+	</head>
+	<body>
+		{#projects}
+			<a href="{url|s}">{name|s}</a>
+			{description|s}
+		{/projects}
+		{^projects}
+			No projects
+		{/projects}
+	</body>
+</html>

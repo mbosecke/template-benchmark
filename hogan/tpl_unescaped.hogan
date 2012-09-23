@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>{{{title}}}</title>
+	</head>
+	<body>
+		{{#projects}}
+			<a href="{{{url}}}">{{{name}}}</a>
+			{{{description}}}
+		{{/projects}}
+		{{^projects}}
+			No projects
+		{{/projects}}
+	</body>
+</html>

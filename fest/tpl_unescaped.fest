@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+	<html>
+		<head>
+			<title><fest:value output="text">json.title</fest:value></title>
+		</head>
+		<body>
+			<fest:if test="json.projects.length">
+				<fest:for iterate="json.projects" index="i">
+					<a>
+						<fest:attributes>
+							<fest:attribute name="href"><fest:value output="text">json.projects[i].url</fest:value></fest:attribute>
+						</fest:attributes>
+						<fest:value output="text">json.projects[i].name</fest:value>
+					</a>
+					<fest:value output="text">json.projects[i].description</fest:value>
+				</fest:for>
+			</fest:if>
+			<fest:if test="!json.projects.length">
+				No projects
+			</fest:if>
+		</body>
+	</html>
+</fest:template>

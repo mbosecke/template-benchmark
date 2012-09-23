@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title><%- title %></title>
+	</head>
+	<body>
+		<% if (projects.length) { %>
+			<% for (var i = 0; i < projects.length; i++) { %>
+				<a href="<%- projects[i].url %>"><%- projects[i].name %></a>
+				<%- projects[i].description %>
+			<% } %>
+		<% } else { %>
+			No projects
+		<% } %>
+	</body>
+</html>
