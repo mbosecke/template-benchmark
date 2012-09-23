@@ -13,6 +13,8 @@
 		"swig": "0.12.0",
 		"jade": "0.27.2",
 		"hogan.js": "2.0.0",
-		"dustjs-linkedin": "1.1.0"
+		"dustjs-linkedin": "1.1.0",
+		"fest": "0.4.0",
+		"dot": "0.2.6"
 	}
 }
