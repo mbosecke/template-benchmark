@@ -1,22 +1,4 @@
-var data = {
-	title : 'Projects',
-	projects : [
-		{ name : 'Facebook', url : 'http://facebook.com', description : 'Social network' },
-		{ name : 'Google', url : 'http://google.com', description : 'Search engine' },
-		{ name : 'Twitter', url : 'http://twitter.com', description : 'Microblogging service' },
-		{ name : 'Amazon', url : 'http://amazon.com', description : 'Online retailer' },
-		{ name : 'eBay', url : 'http://ebay.com', description : 'Online auction' },
-		{ name : 'Wikipedia', url : 'http://wikipedia.org', description : 'A free encyclopedia' },
-		{ name : 'LiveJournal', url : 'http://livejournal.com', description : 'Blogging platform' },
-		{ name : 'Facebook', url : 'http://facebook.com', description : 'Social network' },
-		{ name : 'Google', url : 'http://google.com', description : 'Search engine' },
-		{ name : 'Twitter', url : 'http://twitter.com', description : 'Microblogging service' },
-		{ name : 'Amazon', url : 'http://amazon.com', description : 'Online retailer' },
-		{ name : 'eBay', url : 'http://ebay.com', description : 'Online auction' },
-		{ name : 'Wikipedia', url : 'http://wikipedia.org', description : 'A free encyclopedia' },
-		{ name : 'LiveJournal', url : 'http://livejournal.com', description : 'Blogging platform' }
-	]
-};
+var data = require('./data');
 
 var count = 100000;
 var ect = require('./ect/ect.js');
@@ -28,6 +10,7 @@ var hogan = require('./hogan/hogan.js');
 var dust = require('./dust/dust.js');
 var fest = require('./fest/fest.js');
 var dot = require('./dot/dot.js');
+var handlebars = require('./handlebars/handlebars.js');
 
 var test = function(name, sample, cb) {
 	var i = 0;
@@ -72,6 +55,7 @@ var samples = [
 	{ name : 'Dust', sample : dust },
 	{ name : 'Swig', sample : swig },
 	{ name : 'Hogan.js', sample : hogan },
+	{ name : 'Handlebars.js', sample : handlebars },
 	{ name : 'EJS', sample : ejs },
 	{ name : 'Eco', sample : eco },
 	{ name : 'ECT', sample : ect }
@@ -82,7 +66,10 @@ var runTests = function () {
 		var sample = samples.pop();
 		test(sample.name, sample.sample, function (err, name, result) {
 			testUnescaped(sample.name, sample.sample, function (err, name, resultUnescaped) {
-				console.log(name + ' : ', result + 'ms/' + resultUnescaped + 'ms');
+				console.log(name);
+				console.log('  Escaped   : ' + result + 'ms');
+				console.log('  Unescaped : ' + resultUnescaped + 'ms');
+				console.log('  Total     : ' + (result + resultUnescaped) + 'ms');
 				runTests();
 			});
 		});
@@ -90,5 +77,4 @@ var runTests = function () {
 };
 
 console.log('Rendering ' + count + ' templates:');
-console.log('escaped/unescaped');
 runTests();
