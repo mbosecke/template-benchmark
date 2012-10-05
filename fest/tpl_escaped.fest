@@ -13,7 +13,7 @@
 						</fest:attributes>
 						<fest:value>json.projects[i].name</fest:value>
 					</a>
-					<fest:value>json.projects[i].description</fest:value>
+					<p><fest:value>json.projects[i].description</fest:value></p>
 				</fest:for>
 			</fest:if>
 			<fest:if test="!json.projects.length">

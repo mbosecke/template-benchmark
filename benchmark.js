@@ -70,11 +70,12 @@ var runTests = function () {
 				console.log('  Escaped   : ' + result + 'ms');
 				console.log('  Unescaped : ' + resultUnescaped + 'ms');
 				console.log('  Total     : ' + (result + resultUnescaped) + 'ms');
+				console.log('');
 				runTests();
 			});
 		});
 	}
 };
 
-console.log('Rendering ' + count + ' templates:');
+console.log('Rendering ' + count + ' templates:\n');
 runTests();

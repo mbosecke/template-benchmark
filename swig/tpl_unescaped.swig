@@ -6,7 +6,7 @@
 		{% if projects.length %}
 			{% for project in projects %}
 				<a href="{{ project.url|raw }}">{{ project.name|raw }}</a>
-				{{ project.description|raw }}
+				<p>{{ project.description|raw }}</p>
 			{% endfor %}
 		{% else %}
 			No projects

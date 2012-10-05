@@ -6,7 +6,7 @@
 		{{? it.projects.length }}
 			{{~it.projects :project:index}}
 				<a href="{{=project.url}}">{{=project.name }}</a>
-				{{=project.description }}
+				<p>{{=project.description }}</p>
 			{{~}}
 		{{??}}
 			No projects

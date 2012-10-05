@@ -6,7 +6,7 @@
 		<% if (projects.length) { %>
 			<% for (var i = 0; i < projects.length; i++) { %>
 				<a href="<%= projects[i].url %>"><%= projects[i].name %></a>
-				<%= projects[i].description %>
+				<p><%= projects[i].description %></p>
 			<% } %>
 		<% } else { %>
 			No projects
