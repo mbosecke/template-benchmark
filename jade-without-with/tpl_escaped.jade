@@ -1,0 +1,11 @@
+html
+	head
+		title= self.title
+	body
+		- if (self.projects.length)
+			- self.projects.forEach(function(project) {
+				a(href="#{project.url}")= project.name
+				p= project.description
+			- })
+		- else
+			No projects

@@ -4,6 +4,7 @@ var count = 100000;
 var ect = require('./ect/ect.js');
 var ejs = require('./ejs/ejs.js');
 var jade = require('./jade/jade.js');
+var jadeWithoutWith = require('./jade-without-with/jade.js');
 var eco = require('./eco/eco.js');
 var swig = require('./swig/swig.js');
 var hogan = require('./hogan/hogan.js');
@@ -50,6 +51,7 @@ var testUnescaped = function(name, sample, cb) {
 
 var samples = [
 	{ name : 'Jade', sample : jade },
+	{ name : 'Jade without `with`', sample : jadeWithoutWith },
 	{ name : 'Fest', sample : fest },
 	{ name : 'doT', sample : dot },
 	{ name : 'Dust', sample : dust },
