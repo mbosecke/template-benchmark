@@ -3,6 +3,7 @@
 		<title>{{=it.title}}</title>
 	</head>
 	<body>
+		<p>{{=it.text}}</p>
 		{{? it.projects.length }}
 			{{~it.projects :project:index}}
 				<a href="{{=project.url}}">{{=project.name }}</a>

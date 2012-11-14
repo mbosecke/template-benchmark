@@ -52,14 +52,14 @@ var testUnescaped = function(name, sample, cb) {
 var samples = [
 	{ name : 'Jade', sample : jade },
 	{ name : 'Jade without `with`', sample : jadeWithoutWith },
-	{ name : 'Fest', sample : fest },
-	{ name : 'doT', sample : dot },
-	{ name : 'Dust', sample : dust },
-	{ name : 'Swig', sample : swig },
-	{ name : 'Hogan.js', sample : hogan },
-	{ name : 'Handlebars.js', sample : handlebars },
 	{ name : 'EJS', sample : ejs },
 	{ name : 'Eco', sample : eco },
+	{ name : 'Swig', sample : swig },
+	{ name : 'doT', sample : dot },
+	{ name : 'Handlebars.js', sample : handlebars },
+	{ name : 'Fest', sample : fest },
+	{ name : 'Hogan.js', sample : hogan },
+	{ name : 'Dust', sample : dust },
 	{ name : 'ECT', sample : ect }
 ];
 

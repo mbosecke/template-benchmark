@@ -3,6 +3,7 @@
 		<title>{title|s}</title>
 	</head>
 	<body>
+		<p>{text|s}</p>
 		{#projects}
 			<a href="{url|s}">{name|s}</a>
 			<p>{description|s}</p>

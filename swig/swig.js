@@ -8,13 +8,13 @@ swig.init({
 
 module.exports.prepare = function (data, done) {
 	tplData = data;
-	compiled = swig.compileFile('/tpl_escaped.swig');
+	compiled = swig.compileFile('./tpl_escaped.swig');
 	done();
 };
 
 module.exports.prepareUnescaped = function (data, done) {
 	tplData = data;
-	compiled = swig.compileFile('/tpl_unescaped.swig');
+	compiled = swig.compileFile('./tpl_unescaped.swig');
 	done();
 };
 

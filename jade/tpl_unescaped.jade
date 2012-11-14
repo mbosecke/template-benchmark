@@ -2,6 +2,7 @@ html
 	head
 		title!= title
 	body
+		p!= text
 		- if (projects.length)
 			- projects.forEach(function(project) {
 				a(href="#{project.url}")!= project.name

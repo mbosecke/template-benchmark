@@ -5,6 +5,7 @@
 			<title><fest:value output="text">json.title</fest:value></title>
 		</head>
 		<body>
+			<p><fest:value output="text">json.text</fest:value></p>
 			<fest:if test="json.projects.length">
 				<fest:for iterate="json.projects" index="i">
 					<a>

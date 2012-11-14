@@ -3,6 +3,7 @@
 		<title><%- title %></title>
 	</head>
 	<body>
+		<p><%- text %></p>
 		<% if (projects.length) { %>
 			<% for (var i = 0; i < projects.length; i++) { %>
 				<a href="<%- projects[i].url %>"><%- projects[i].name %></a>

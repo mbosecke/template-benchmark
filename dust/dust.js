@@ -8,8 +8,8 @@ module.exports.prepare = function (data, done) {
 	tplData = data;
 
 	compiled = dust.compile(str, 'test');
-	dust.loadSource(compiled);	
-	
+	dust.loadSource(compiled);
+
 	done();
 };
 
@@ -18,7 +18,7 @@ module.exports.prepareUnescaped = function (data, done) {
 	tplData = data;
 
 	compiled = dust.compile(str, 'test');
-	dust.loadSource(compiled);	
+	dust.loadSource(compiled);
 
 	done();
 };
