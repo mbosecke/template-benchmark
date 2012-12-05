@@ -54,7 +54,7 @@ var samples = [
 	{ name : 'Jade', sample : jade },
 	{ name : 'Jade without `with`', sample : jadeWithoutWith },
 	{ name : 'EJS', sample : ejs },
-	{ name : 'EJS without `with`', sample : ejsWithoutWith }
+	{ name : 'EJS without `with`', sample : ejsWithoutWith },
 	{ name : 'Eco', sample : eco },
 	{ name : 'Swig', sample : swig },
 	{ name : 'doT', sample : dot },
