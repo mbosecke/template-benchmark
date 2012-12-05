@@ -3,6 +3,7 @@ var data = require('./data');
 var count = 100000;
 var ect = require('./ect/ect.js');
 var ejs = require('./ejs/ejs.js');
+var ejsWithoutWith = require('./ejs-without-with/ejs.js');
 var jade = require('./jade/jade.js');
 var jadeWithoutWith = require('./jade-without-with/jade.js');
 var eco = require('./eco/eco.js');
@@ -53,6 +54,7 @@ var samples = [
 	{ name : 'Jade', sample : jade },
 	{ name : 'Jade without `with`', sample : jadeWithoutWith },
 	{ name : 'EJS', sample : ejs },
+	{ name : 'EJS without `with`', sample : ejsWithoutWith }
 	{ name : 'Eco', sample : eco },
 	{ name : 'Swig', sample : swig },
 	{ name : 'doT', sample : dot },

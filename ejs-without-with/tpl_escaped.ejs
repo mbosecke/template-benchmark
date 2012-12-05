@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title><%= locals.title %></title>
+	</head>
+	<body>
+		<p><%= locals.text %></p>
+		<% if (locals.projects.length) { %>
+			<% for (var i = 0; i < locals.projects.length; i++) { %>
+				<a href="<%= locals.projects[i].url %>"><%= locals.projects[i].name %></a>
+				<p><%= locals.projects[i].description %></p>
+			<% } %>
+		<% } else { %>
+			No projects
+		<% } %>
+	</body>
+</html>
