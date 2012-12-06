@@ -1,0 +1,11 @@
+html ->
+	head ->
+		title @title
+	body ->
+		p @text
+		if @projects.length
+			for project in @projects
+				a href : project.url, -> project.name
+				p project.description
+		else
+			No projects
