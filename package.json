@@ -14,8 +14,9 @@
 		"jade": "0.27.7",
 		"hogan.js": "2.0.0",
 		"dustjs-linkedin": "1.1.1",
-		"fest": "0.4.3",
+		"fest": "0.4.4",
 		"dot": "0.2.6",
-		"handlebars": "1.0.7"
+		"handlebars": "1.0.7",
+		"coffeekup": "0.3.1"
 	}
 }
