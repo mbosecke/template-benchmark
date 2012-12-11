@@ -4,9 +4,8 @@ html
 	body
 		p!= self.text
 		- if (self.projects.length)
-			- self.projects.forEach(function(project) {
-				a(href="#{project.url}")!= project.name
+			- each project in self.projects
+				a(href!="#{project.url}")!= project.name
 				p!= project.description
-			- })
 		- else
 			No projects
