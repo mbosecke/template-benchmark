@@ -6,7 +6,7 @@
 - [doT](https://github.com/olado/doT) v0.2.6 ([website](http://olado.github.com/doT/))
 - [Dust](https://github.com/linkedin/dustjs) v1.1.1 ([website](http://linkedin.github.com/dustjs/))
 - [Eco](https://github.com/sstephenson/eco) v1.1.0-rc-3
-- [ECT](https://github.com/baryshev/ect) v0.3.5 ([website](http://ectjs.com/))
+- [ECT](https://github.com/baryshev/ect) v0.3.6 ([website](http://ectjs.com/))
 - [EJS](https://github.com/visionmedia/ejs) v0.8.3
 - [Fest](https://github.com/mailru/fest) v0.4.4
 - [Handlebars.js](https://github.com/wycats/handlebars.js/) v1.0.7 ([website](http://handlebarsjs.com/))
@@ -25,69 +25,69 @@
 	Rendering 100000 templates:
 	
 	ECT
-	  Escaped   : 2349ms
-	  Unescaped : 136ms
-	  Total     : 2485ms
+	  Escaped   : 2207ms
+	  Unescaped : 121ms
+	  Total     : 2328ms
 	
 	Dust
-	  Escaped   : 2842ms
-	  Unescaped : 376ms
-	  Total     : 3218ms
+	  Escaped   : 2609ms
+	  Unescaped : 377ms
+	  Total     : 2986ms
 	
 	Hogan.js
-	  Escaped   : 3441ms
-	  Unescaped : 809ms
-	  Total     : 4250ms
+	  Escaped   : 3586ms
+	  Unescaped : 777ms
+	  Total     : 4363ms
 	
 	Fest
-	  Escaped   : 4541ms
-	  Unescaped : 352ms
-	  Total     : 4893ms
+	  Escaped   : 4329ms
+	  Unescaped : 286ms
+	  Total     : 4615ms
 	
 	Handlebars.js
-	  Escaped   : 4339ms
-	  Unescaped : 279ms
-	  Total     : 4618ms
+	  Escaped   : 4554ms
+	  Unescaped : 278ms
+	  Total     : 4832ms
 	
 	EJS without `with`
-	  Escaped   : 4689ms
-	  Unescaped : 499ms
-	  Total     : 5188ms
+	  Escaped   : 4646ms
+	  Unescaped : 471ms
+	  Total     : 5117ms
 	
 	doT
-	  Escaped   : 5145ms
-	  Unescaped : 84ms
-	  Total     : 5229ms
+	  Escaped   : 5070ms
+	  Unescaped : 80ms
+	  Total     : 5150ms
 	
 	Swig
-	  Escaped   : 5299ms
-	  Unescaped : 401ms
-	  Total     : 5700ms
+	  Escaped   : 5117ms
+	  Unescaped : 379ms
+	  Total     : 5496ms
 	
 	Eco
-	  Escaped   : 8356ms
-	  Unescaped : 972ms
-	  Total     : 9328ms
+	  Escaped   : 7753ms
+	  Unescaped : 975ms
+	  Total     : 8728ms
 	
 	EJS
-	  Escaped   : 6570ms
-	  Unescaped : 2919ms
-	  Total     : 9489ms
+	  Escaped   : 6666ms
+	  Unescaped : 2964ms
+	  Total     : 9630ms
 	
 	Jade without `with`
-	  Escaped   : 9589ms
-	  Unescaped : 4674ms
-	  Total     : 14263ms
+	  Escaped   : 8771ms
+	  Unescaped : 3136ms
+	  Total     : 11907ms
 	
 	CoffeeKup
-	  Escaped   : 5882ms
-	  Unescaped : 11011ms
-	  Total     : 16893ms
+	  Escaped   : 5411ms
+	  Unescaped : 10808ms
+	  Total     : 16219ms
 	
 	Jade
-	  Escaped   : 17987ms
-	  Unescaped : 13378ms
-	  Total     : 31365ms
+	  Escaped   : 16752ms
+	  Unescaped : 11003ms
+	  Total     : 27755ms
 
 ## Usage
 
