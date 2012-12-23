@@ -6,13 +6,13 @@
 - [doT](https://github.com/olado/doT) v0.2.6 ([website](http://olado.github.com/doT/))
 - [Dust](https://github.com/linkedin/dustjs) v1.1.1 ([website](http://linkedin.github.com/dustjs/))
 - [Eco](https://github.com/sstephenson/eco) v1.1.0-rc-3
-- [ECT](https://github.com/baryshev/ect) v0.4.0 ([website](http://ectjs.com/))
+- [ECT](https://github.com/baryshev/ect) v0.4.1 ([website](http://ectjs.com/))
 - [EJS](https://github.com/visionmedia/ejs) v0.8.3
 - [Fest](https://github.com/mailru/fest) v0.4.4
 - [Handlebars.js](https://github.com/wycats/handlebars.js/) v1.0.7 ([website](http://handlebarsjs.com/))
 - [Hogan.js](https://github.com/twitter/hogan.js) v2.0.0 ([website](http://twitter.github.com/hogan.js/))
 - [Jade](https://github.com/visionmedia/jade) v0.27.7 ([website](http://jade-lang.com/))
-- [Swig](https://github.com/paularmstrong/swig) v0.13.2
+- [Swig](https://github.com/paularmstrong/swig) v0.13.4
 
 ## Test environment
 
