@@ -14,6 +14,7 @@ var fest = require('./fest/fest.js');
 var dot = require('./dot/dot.js');
 var handlebars = require('./handlebars/handlebars.js');
 var coffeekup = require('./coffeekup/coffeekup.js');
+var underscore = require('./underscore/underscore.js');
 
 var test = function(name, sample, cb) {
 	var i = 0;
@@ -57,6 +58,7 @@ var samples = [
 	{ name : 'Jade without `with`', sample : jadeWithoutWith },
 	{ name : 'EJS', sample : ejs },
 	{ name : 'Eco', sample : eco },
+	{ name : 'Underscore', sample : underscore },
 	{ name : 'Swig', sample : swig },
 	{ name : 'doT', sample : dot },
 	{ name : 'EJS without `with`', sample : ejsWithoutWith },
