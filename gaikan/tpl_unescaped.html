@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>!{data.title}</title>
+	</head>
+	<body>
+		<p>!{data.text}</p>
+		<ins data-if="data.projects">
+			<a href="!{data.url}">!{data.name}</a>
+			<p>!{data.description}</p>
+		</ins>
+		<ins data-if="!data.projects">
+			No projects
+		</ins>
+	</body>
+</html>
