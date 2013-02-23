@@ -62,13 +62,13 @@ var samples = [
 	{ name : 'EJS', sample : ejs },
 	{ name : 'Eco', sample : eco },
 	{ name : 'Underscore', sample : underscore },
+	{ name : 'Gaikan', sample: gaikan },
 	{ name : 'Swig', sample : swig },
 	{ name : 'doT', sample : dot },
 	{ name : 'EJS without `with`', sample : ejsWithoutWith },
 	{ name : 'Fest', sample : fest },
 	{ name : 'Hogan.js', sample : hogan },
 	{ name : 'Dust', sample : dust },
-	{ name : 'Gaikan', sample: gaikan },
 	{ name : 'ECT', sample : ect },
 ];
 
