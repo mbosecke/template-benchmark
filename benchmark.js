@@ -15,6 +15,7 @@ var dot = require('./dot/dot.js');
 var handlebars = require('./handlebars/handlebars.js');
 var coffeekup = require('./coffeekup/coffeekup.js');
 var underscore = require('./underscore/underscore.js');
+var gaikan = require('./gaikan/gaikan.js');
 
 var test = function(name, sample, cb) {
 	var i = 0;
@@ -53,6 +54,7 @@ var testUnescaped = function(name, sample, cb) {
 };
 
 var samples = [
+
 	{ name : 'Jade', sample : jade },
 	{ name : 'CoffeeKup', sample : coffeekup },
 	{ name : 'Jade without `with`', sample : jadeWithoutWith },
@@ -66,7 +68,8 @@ var samples = [
 	{ name : 'Fest', sample : fest },
 	{ name : 'Hogan.js', sample : hogan },
 	{ name : 'Dust', sample : dust },
-	{ name : 'ECT', sample : ect }
+	{ name : 'ECT', sample : ect },
+	{ name : 'Gaikan', sample: gaikan }
 ];
 
 var runTests = function () {

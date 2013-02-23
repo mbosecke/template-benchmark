@@ -18,6 +18,7 @@
 		"dot": "0.2.6",
 		"handlebars": "1.0.7",
 		"coffeekup": "0.3.1",
-		"underscore": "1.4.3"
+		"underscore": "1.4.3",
+		"gaikan": "1.2.1"
 	}
 }
