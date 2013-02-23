@@ -4,7 +4,7 @@
 	</head>
 	<body>
 		<p>#{data.text}</p>
-		<ins data-if="data.projects">
+		<ins data-each="data.projects">
 			<a href="#{data.url}">#{data.name}</a>
 			<p>#{data.description}</p>
 		</ins>
