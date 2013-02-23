@@ -7,18 +7,18 @@
 		"url": "git://github.com/baryshev/template-benchmark.git"
 	},
 	"dependencies": {
-		"ect": "0.4.1",
+		"ect": "0.4.7",
 		"ejs": "0.8.3",
 		"eco": "1.1.0-rc-3",
-		"swig": "0.13.4",
-		"jade": "0.27.7",
+		"swig": "0.13.5",
+		"jade": "0.28.1",
 		"hogan.js": "2.0.0",
-		"dustjs-linkedin": "1.1.1",
-		"fest": "0.4.4",
-		"dot": "0.2.6",
-		"handlebars": "1.0.7",
+		"dustjs-linkedin": "1.2.1",
+		"fest": "0.5.4",
+		"dot": "1.0.1",
+		"handlebars": "1.0.9",
 		"coffeekup": "0.3.1",
-		"underscore": "1.4.3",
+		"underscore": "1.4.4",
 		"gaikan": "1.2.1"
 	}
 }

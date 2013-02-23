@@ -3,107 +3,107 @@
 ## Engines
 
 - [CoffeeKup](https://github.com/mauricemach/coffeekup) v0.3.1 ([website](http://coffeekup.org/))
-- [doT](https://github.com/olado/doT) v0.2.6 ([website](http://olado.github.com/doT/))
-- [Dust](https://github.com/linkedin/dustjs) v1.1.1 ([website](http://linkedin.github.com/dustjs/))
+- [doT](https://github.com/olado/doT) v1.0.1 ([website](http://olado.github.com/doT/))
+- [Dust](https://github.com/linkedin/dustjs) v1.2.1 ([website](http://linkedin.github.com/dustjs/))
 - [Eco](https://github.com/sstephenson/eco) v1.1.0-rc-3
-- [ECT](https://github.com/baryshev/ect) v0.4.1 ([website](http://ectjs.com/))
+- [ECT](https://github.com/baryshev/ect) v0.4.7 ([website](http://ectjs.com/))
 - [EJS](https://github.com/visionmedia/ejs) v0.8.3
-- [Fest](https://github.com/mailru/fest) v0.4.4
-- [Handlebars.js](https://github.com/wycats/handlebars.js/) v1.0.7 ([website](http://handlebarsjs.com/))
+- [Fest](https://github.com/mailru/fest) v0.5.4
+- [Handlebars.js](https://github.com/wycats/handlebars.js/) v1.0.9 ([website](http://handlebarsjs.com/))
 - [Hogan.js](https://github.com/twitter/hogan.js) v2.0.0 ([website](http://twitter.github.com/hogan.js/))
-- [Jade](https://github.com/visionmedia/jade) v0.27.7 ([website](http://jade-lang.com/))
-- [Swig](https://github.com/paularmstrong/swig) v0.13.4
-- [Underscore](https://github.com/documentcloud/underscore) v1.4.3 ([website](http://underscorejs.org/))
+- [Jade](https://github.com/visionmedia/jade) v0.28.1 ([website](http://jade-lang.com/))
+- [Swig](https://github.com/paularmstrong/swig) v0.13.5
+- [Underscore](https://github.com/documentcloud/underscore) v1.4.4 ([website](http://underscorejs.org/))
 - [Gaikan](https://github.com/Deathspike/gaikan) v1.2.1
 
 ## Test environment
 
-- CPU: AMD Phenom(tm) II X4 955 3.20 GHz
-- OS: Windows 7 64 bit
+- CPU: Intel Core i5 450M 2.4Ghz
+- OS: Ubuntu Server 12.04
 - Node.JS version: 0.8.20
 
 ## Results
 
 	Rendering 100000 templates:
-	 
-	Gaikan
-	  Escaped   : 3381ms
-	  Unescaped : 38ms
-	  Total     : 3419ms
-	 
+
 	ECT
-	  Escaped   : 7797ms
-	  Unescaped : 153ms
-	  Total     : 7950ms
-	 
+	  Escaped   : 2296ms
+	  Unescaped : 136ms
+	  Total     : 2432ms
+
+	Gaikan
+	  Escaped   : 3012ms
+	  Unescaped : 33ms
+	  Total     : 3045ms
+
 	Dust
-	  Escaped   : 9544ms
-	  Unescaped : 355ms
-	  Total     : 9899ms
-	 
+	  Escaped   : 2687ms
+	  Unescaped : 423ms
+	  Total     : 3110ms
+
 	Hogan.js
-	  Escaped   : 10124ms
-	  Unescaped : 774ms
-	  Total     : 10898ms
-	 
+	  Escaped   : 3464ms
+	  Unescaped : 793ms
+	  Total     : 4257ms
+
 	Fest
-	  Escaped   : 4558ms
-	  Unescaped : 288ms
-	  Total     : 4846ms
-	 
-	Handlebars.js
-	  Escaped   : 4717ms
-	  Unescaped : 287ms
-	  Total     : 5004ms
-	 
+	  Escaped   : 4319ms
+	  Unescaped : 278ms
+	  Total     : 4597ms
+
 	EJS without `with`
-	  Escaped   : 8740ms
-	  Unescaped : 569ms
-	  Total     : 9309ms
-	 
+	  Escaped   : 4744ms
+	  Unescaped : 494ms
+	  Total     : 5238ms
+
 	doT
-	  Escaped   : 5375ms
+	  Escaped   : 5305ms
 	  Unescaped : 91ms
-	  Total     : 5466ms
-	 
+	  Total     : 5396ms
+
 	Swig
-	  Escaped   : 10318ms
-	  Unescaped : 381ms
-	  Total     : 10699ms
-	 
+	  Escaped   : 5202ms
+	  Unescaped : 405ms
+	  Total     : 5607ms
+
 	Underscore
-	  Escaped   : 5742ms
-	  Unescaped : 2191ms
-	  Total     : 7933ms
-	 
+	  Escaped   : 6045ms
+	  Unescaped : 2729ms
+	  Total     : 8774ms
+
 	Eco
-	  Escaped   : 13110ms
-	  Unescaped : 1012ms
-	  Total     : 14122ms
-	 
+	  Escaped   : 8238ms
+	  Unescaped : 1003ms
+	  Total     : 9241ms
+
 	EJS
-	  Escaped   : 11761ms
-	  Unescaped : 2693ms
-	  Total     : 14454ms
-	 
+	  Escaped   : 6527ms
+	  Unescaped : 2835ms
+	  Total     : 9362ms
+
+	Handlebars.js
+	  Escaped   : 8238ms
+	  Unescaped : 2756ms
+	  Total     : 10994ms
+
 	Jade without `with`
-	  Escaped   : 11530ms
-	  Unescaped : 3008ms
-	  Total     : 14538ms
-	 
+	  Escaped   : 9671ms
+	  Unescaped : 3365ms
+	  Total     : 13036ms
+
 	CoffeeKup
-	  Escaped   : 4547ms
-	  Unescaped : 14383ms
-	  Total     : 18930ms
-	 
+	  Escaped   : 5082ms
+	  Unescaped : 10555ms
+	  Total     : 15637ms
+
 	Jade
-	  Escaped   : 19954ms
-	  Unescaped : 10105ms
-	  Total     : 30059ms
+	  Escaped   : 17778ms
+	  Unescaped : 12013ms
+	  Total     : 29791ms
 
 ## Usage
 
-	git clone git://github.com/Deathspike/template-benchmark.git
+	git clone git://github.com/baryshev/template-benchmark.git
 	cd template-benchmark
 	npm install
 	node ./benchmark.js
