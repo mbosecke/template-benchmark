@@ -6,15 +6,15 @@
 - [doT](https://github.com/olado/doT) v1.0.1 ([website](http://olado.github.com/doT/))
 - [Dust](https://github.com/linkedin/dustjs) v1.2.1 ([website](http://linkedin.github.com/dustjs/))
 - [Eco](https://github.com/sstephenson/eco) v1.1.0-rc-3
-- [ECT](https://github.com/baryshev/ect) v0.4.7 ([website](http://ectjs.com/))
+- [ECT](https://github.com/baryshev/ect) v0.4.8 ([website](http://ectjs.com/))
 - [EJS](https://github.com/visionmedia/ejs) v0.8.3
 - [Fest](https://github.com/mailru/fest) v0.5.4
+- [Gaikan](https://github.com/Deathspike/gaikan) v1.3.4
 - [Handlebars.js](https://github.com/wycats/handlebars.js/) v1.0.9 ([website](http://handlebarsjs.com/))
 - [Hogan.js](https://github.com/twitter/hogan.js) v2.0.0 ([website](http://twitter.github.com/hogan.js/))
 - [Jade](https://github.com/visionmedia/jade) v0.28.1 ([website](http://jade-lang.com/))
 - [Swig](https://github.com/paularmstrong/swig) v0.13.5
 - [Underscore](https://github.com/documentcloud/underscore) v1.4.4 ([website](http://underscorejs.org/))
-- [Gaikan](https://github.com/Deathspike/gaikan) v1.3.4
 
 ## Test environment
 
@@ -27,9 +27,9 @@
 	Rendering 100000 templates:
 
 	ECT
-	  Escaped   : 2220ms
-	  Unescaped : 128ms
-	  Total     : 2348ms
+	  Escaped   : 2180ms
+	  Unescaped : 133ms
+	  Total     : 2313ms
 
 	Dust
 	  Escaped   : 2547ms
