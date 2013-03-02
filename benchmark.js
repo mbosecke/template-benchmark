@@ -59,17 +59,17 @@ var samples = [
 	{ name : 'CoffeeKup', sample : coffeekup },
 	{ name : 'Jade without `with`', sample : jadeWithoutWith },
 	{ name : 'Handlebars.js', sample : handlebars },
-	{ name : 'EJS', sample : ejs },
 	{ name : 'Eco', sample : eco },
+	{ name : 'EJS', sample : ejs },
 	{ name : 'Underscore', sample : underscore },
-	{ name : 'Gaikan', sample: gaikan },
 	{ name : 'Swig', sample : swig },
 	{ name : 'doT', sample : dot },
 	{ name : 'EJS without `with`', sample : ejsWithoutWith },
 	{ name : 'Fest', sample : fest },
+	{ name : 'Gaikan', sample: gaikan },
 	{ name : 'Hogan.js', sample : hogan },
 	{ name : 'Dust', sample : dust },
-	{ name : 'ECT', sample : ect },
+	{ name : 'ECT', sample : ect }
 ];
 
 var runTests = function () {
