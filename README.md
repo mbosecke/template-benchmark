@@ -48,3 +48,5 @@ PebbleBenchmark.benchmark      thrpt   50  26547.355 ± 311.757  ops/s
 ThymeleafBenchmark.benchmark   thrpt   50    756.536 ±  16.601  ops/s
 VelocityBenchmark.benchmark    thrpt   50  18388.098 ±  59.178  ops/s
 ````
+
+![Template Comparison](results.png)

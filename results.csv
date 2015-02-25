@@ -1,0 +1,6 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit"
+"com.mitchellbosecke.benchmark.FreemarkerBenchmark.benchmark","thrpt",1,50.000000,14963.742414,107.939165,"ops/s"
+"com.mitchellbosecke.benchmark.MoustacheBenchmark.benchmark","thrpt",1,50.000000,32836.315928,135.504102,"ops/s"
+"com.mitchellbosecke.benchmark.PebbleBenchmark.benchmark","thrpt",1,50.000000,27515.889592,324.357246,"ops/s"
+"com.mitchellbosecke.benchmark.ThymeleafBenchmark.benchmark","thrpt",1,50.000000,788.701841,11.296145,"ops/s"
+"com.mitchellbosecke.benchmark.VelocityBenchmark.benchmark","thrpt",1,50.000000,18830.615978,141.901540,"ops/s"
