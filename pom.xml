@@ -107,7 +107,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.github.spullara.mustache.java</groupId>
-			<artifactId>compiler</artifactId>
+			<artifactId>indy</artifactId>
 			<version>${mustache.version}</version>
 		</dependency>
 		<dependency>
