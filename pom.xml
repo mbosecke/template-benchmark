@@ -14,7 +14,7 @@
 		<jmh.version>1.6.1</jmh.version>
 		<uberjar.name>benchmarks</uberjar.name>
 
-		<pebble.version>1.4.2-SNAPSHOT</pebble.version>
+		<pebble.version>1.4.1</pebble.version>
 		<mustache.version>0.8.17</mustache.version>
 		<freemarker.version>2.3.21</freemarker.version>
 		<velocity.version>1.7</velocity.version>
