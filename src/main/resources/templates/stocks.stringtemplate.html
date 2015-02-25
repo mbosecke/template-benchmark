@@ -3,7 +3,7 @@
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
  <head>
-  <title>Stock Prices - Thymeleaf</title>
+  <title>Stock Prices - Mustache</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -42,7 +42,7 @@ thead {
 
  <body>
 
-  <h1>Stock Prices - Thymeleaf</h1>
+  <h1>Stock Prices - String Template</h1>
 
   <table>
    <thead>
@@ -51,21 +51,22 @@ thead {
     </tr>
    </thead>
    <tbody>
-   
-    <tr th:each="item,iterStat: ${items}" th:class="${iterStat.odd} ? 'even' : 'odd'">
-     <td style="text-align: center" th:utext="${iterStat.index+1}"></td>
+{{#items}}
+    <tr class="${["odd", "even"][item_index%2]}">
+     <td style="text-align: center">${item_index + 1}</td>
      <td>
-      <a th:href="${'/stocks/' + item.symbol}" th:utext="${item.symbol}"></a>
+      <a href="/stocks/{{symbol}}">{{symbol}}</a>
      </td>
      <td>
-      <a th:href="${item.url}" th:utext="${item.name}"></a>
+      <a href="{{url}}">{{name}}</a>
      </td>
      <td>
-      <strong th:utext="${item.price}"></strong>
+      <strong>{{price}}</strong>
      </td>
-     <td th:utext="${item.change}" th:class="${item.change &lt; 0.0 ? 'minus' : ''}"></td>
-     <td th:utext="${item.ratio}" th:class="${item.change &lt; 0.0 ? 'minus' : ''}"></td>
+     <td>{{change}}</td>
+     <td>{{ratio}}</td>
     </tr>
+{{/items}}
    </tbody>
   </table>
 
