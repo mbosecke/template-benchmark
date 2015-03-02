@@ -1,73 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
- <head>
-  <title>Stock Prices - Thymeleaf</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <link rel="shortcut icon" href="/images/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="/css/style.css" media="all" />
-  <script type="text/javascript" src="/js/util.js"></script>
-  <style type="text/css">
-  /*<![CDATA[*/
 
-body {
-    color: #333333;
-    line-height: 150%;
-}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stock Prices - Thymeleaf</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="all" />
+	<script type="text/javascript" src="/js/util.js"></script>
+	<style type="text/css">
+		/*<![CDATA[*/
+		body {
+			color: #333333;
+			line-height: 150%;
+		}
+		
+		thead {
+			font-weight: bold;
+			background-color: #CCCCCC;
+		}
+		
+		.odd {
+			background-color: #FFCCCC;
+		}
+		
+		.even {
+			background-color: #CCCCFF;
+		}
+		
+		.minus {
+			color: #FF0000;
+		}
+		
+		/*]]>*/
+	</style>
 
-thead {
-    font-weight: bold;
-    background-color: #CCCCCC;
-}
+</head>
 
-.odd {
-    background-color: #FFCCCC;
-}
+<body>
 
-.even {
-    background-color: #CCCCFF;
-}
+	<h1>Stock Prices - Thymeleaf</h1>
 
-.minus {
-    color: #FF0000;
-}
+	<table>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>symbol</th>
+				<th>name</th>
+				<th>price</th>
+				<th>change</th>
+				<th>ratio</th>
+			</tr>
+		</thead>
+		<tbody>
 
-  /*]]>*/
-  </style>
+			<tr th:each="item: ${items}"
+				th:class="${itemStat.odd} ? 'odd' : 'even'">
+				<td style="text-align: center" th:utext="${itemStat.count}"></td>
+				<td><a th:href="${'/stocks/' + item.symbol}"
+					th:utext="${item.symbol}"></a></td>
+				<td><a th:href="${item.url}" th:utext="${item.name}"></a></td>
+				<td><strong th:utext="${item.price}"></strong></td>
+				<td th:utext="${item.change}"
+					th:class="${item.change lt 0} ? 'minus'"></td>
+				<td th:utext="${item.ratio}"
+					th:class="${item.change lt 0} ? 'minus'"></td>
+			</tr>
+		</tbody>
+	</table>
 
- </head>
-
- <body>
-
-  <h1>Stock Prices - Thymeleaf</h1>
-
-  <table>
-   <thead>
-    <tr>
-     <th>#</th><th>symbol</th><th>name</th><th>price</th><th>change</th><th>ratio</th>
-    </tr>
-   </thead>
-   <tbody>
-   
-    <tr th:each="item,iterStat: ${items}" th:class="${iterStat.odd} ? 'even' : 'odd'">
-     <td style="text-align: center" th:utext="${iterStat.index+1}"></td>
-     <td>
-      <a th:href="${'/stocks/' + item.symbol}" th:utext="${item.symbol}"></a>
-     </td>
-     <td>
-      <a th:href="${item.url}" th:utext="${item.name}"></a>
-     </td>
-     <td>
-      <strong th:utext="${item.price}"></strong>
-     </td>
-     <td th:utext="${item.change}" th:class="${item.change &lt; 0.0 ? 'minus' : ''}"></td>
-     <td th:utext="${item.ratio}" th:class="${item.change &lt; 0.0 ? 'minus' : ''}"></td>
-    </tr>
-   </tbody>
-  </table>
-
- </body>
+</body>
 </html>
