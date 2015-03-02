@@ -13,7 +13,7 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
-public class FreemarkerBenchmark extends BaseBenchmark {
+public class Freemarker extends BaseBenchmark {
 
     private Map<String, Object> context;
 

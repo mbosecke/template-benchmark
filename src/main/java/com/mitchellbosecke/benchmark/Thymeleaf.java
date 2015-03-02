@@ -14,7 +14,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import freemarker.template.TemplateException;
 
-public class ThymeleafBenchmark extends BaseBenchmark {
+public class Thymeleaf extends BaseBenchmark {
 
     private TemplateEngine engine;
 

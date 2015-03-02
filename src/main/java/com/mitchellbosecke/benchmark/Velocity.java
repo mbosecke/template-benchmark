@@ -10,7 +10,7 @@ import org.apache.velocity.app.VelocityEngine;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
 
-public class VelocityBenchmark extends BaseBenchmark {
+public class Velocity extends BaseBenchmark {
 
     private VelocityContext context;
 

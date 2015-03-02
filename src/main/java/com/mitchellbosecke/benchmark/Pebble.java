@@ -12,7 +12,7 @@ import com.mitchellbosecke.pebble.error.PebbleException;
 import com.mitchellbosecke.pebble.extension.escaper.EscaperExtension;
 import com.mitchellbosecke.pebble.template.PebbleTemplate;
 
-public class PebbleBenchmark extends BaseBenchmark {
+public class Pebble extends BaseBenchmark {
 
     private Map<String, Object> context;
 
