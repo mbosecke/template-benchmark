@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Stock Prices - Pebble</title>
+	<title>Stock Prices</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -15,24 +14,24 @@
 			color: #333333;
 			line-height: 150%;
 		}
-		
+
 		thead {
 			font-weight: bold;
 			background-color: #CCCCCC;
 		}
-		
+
 		.odd {
 			background-color: #FFCCCC;
 		}
-		
+
 		.even {
 			background-color: #CCCCFF;
 		}
-		
+
 		.minus {
 			color: #FF0000;
 		}
-		
+
 		/*]]>*/
 	</style>
 
@@ -40,8 +39,8 @@
 
 	<body>
 
-		<h1>Stock Prices - PEBBLE</h1>
-		
+		<h1>Stock Prices</h1>
+
 		<table>
 	   		<thead>
 	    		<tr>
@@ -55,8 +54,8 @@
 			</thead>
 			<tbody>
 			{% for item in items %}
-				<tr class="{% if loop.index is even %}even{% else %}odd{% endif %}">
-			    	<td>{{loop.index}}</td>
+				<tr class="{% if (loop.index + 1) is even %}even{% else %}odd{% endif %}">
+			    	<td>{{loop.index + 1}}</td>
 			    	<td>
 			    		<a href="/stocks/{{ item.symbol }}">{{item.symbol}}</a>
 			    	</td>
@@ -66,7 +65,7 @@
 			     	<td>
 			     		<strong>{{ item.price }}</strong>
 			     	</td>
-			     	
+
 					{% if item.change < 0.0 %}
 						<td class="minus">{{item.change}}</td>
 						<td class="minus">{{item.ratio}}</td>
@@ -74,7 +73,7 @@
 						<td>{{item.change}}</td>
 						<td>{{item.ratio}}</td>
 					{% endif %}
-					
+
 				</tr>
 			{% endfor %}
 			</tbody>

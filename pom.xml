@@ -20,6 +20,8 @@
 		<velocity.version>1.7</velocity.version>
 		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
 		<stringtemplate.version>4.0.2</stringtemplate.version>
+		<junit.version>4.11</junit.version>
+		<trimou.version>1.7.3.Final</trimou.version>
 	</properties>
 
 	<licenses>
@@ -125,6 +127,18 @@
 			<artifactId>thymeleaf</artifactId>
 			<version>${thymeleaf.version}</version>
 		</dependency>
+		<dependency>
+            <groupId>org.trimou</groupId>
+            <artifactId>trimou-core</artifactId>
+            <version>${trimou.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+            <version>${junit.version}</version>
+        </dependency>
 
 	</dependencies>
 

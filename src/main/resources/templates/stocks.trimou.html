@@ -53,18 +53,16 @@ thead {
 			</tr>
 		</thead>
 		<tbody>
-			<#list items as item>
-			<tr class="${["even", "odd"][(item_index+1) %2]}">
-				<td>${item_index + 1}</td>
-				<td><a href="/stocks/${item.symbol}">${item.symbol}</a></td>
-				<td><a href="${item.url}">${item.name}</a></td>
-				<td><strong>${item.price}</strong></td><#if (item.change < 0.0)>
-				<td class="minus">${item.change}</td>
-				<td class="minus">${item.ratio}</td><#else>
-				<td>${item.change}</td>
-				<td>${item.ratio}</td></#if>
+			{{#items}}
+			<tr class="{{isEven iterIndex 'even' 'odd'}}">
+				<td>{{iterIndex}}</td>
+				<td><a href="/stocks/{{symbol}}">{{symbol}}</a></td>
+				<td><a href="{{url}}">{{name}}</a></td>
+				<td><strong>{{price}}</strong></td>
+				<td{{isNegative change ' class="minus"'}}>{{change}}</td>
+				<td{{isNegative change ' class="minus"'}}>{{ratio}}</td>
 			</tr>
-			</#list>
+			{{/items}}
 		</tbody>
 	</table>
 

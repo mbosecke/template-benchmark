@@ -8,6 +8,7 @@ JMH benchmark for the popular Java template engines:
 * Pebble
 * Thymeleaf
 * Velocity
+* Trimou
 
 Running the benchmark
 ======================
@@ -30,7 +31,7 @@ To strive for a common set of features across template engines, the following co
 
 Interpreting the Results
 ========================
-The benchmarks measure throughput, given in "ops/time". The time unit used is seconds. 
+The benchmarks measure throughput, given in "ops/time". The time unit used is seconds.
 Generally, the score represents the number of templates rendered per second; the higher the score, the better.
 
 Example Results
