@@ -11,12 +11,12 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jmh.version>1.6.1</jmh.version>
+		<jmh.version>1.7.1</jmh.version>
 		<uberjar.name>benchmarks</uberjar.name>
 
 		<pebble.version>1.4.4</pebble.version>
 		<mustache.version>0.9.0</mustache.version>
-		<freemarker.version>2.3.21</freemarker.version>
+		<freemarker.version>2.3.22</freemarker.version>
 		<velocity.version>1.7</velocity.version>
 		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
 		<stringtemplate.version>4.0.2</stringtemplate.version>
