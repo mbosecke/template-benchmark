@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Stock Prices - Velocity</title>
+	<title>Stock Prices</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -15,24 +14,24 @@
 			color: #333333;
 			line-height: 150%;
 		}
-		
+
 		thead {
 			font-weight: bold;
 			background-color: #CCCCCC;
 		}
-		
+
 		.odd {
 			background-color: #FFCCCC;
 		}
-		
+
 		.even {
 			background-color: #CCCCFF;
 		}
-		
+
 		.minus {
 			color: #FF0000;
 		}
-		
+
 		/*]]>*/
 	</style>
 
@@ -40,7 +39,7 @@
 
 <body>
 
-	<h1>Stock Prices - Velocity</h1>
+	<h1>Stock Prices</h1>
 
 	<table>
 		<thead>
@@ -67,7 +66,7 @@
 			    <td>
 			    	<strong>${item.price}</strong>
 			    </td>
-			    
+
 			    #if($item.change < 0.0)
 			    	<td class="minus">${item.change}</td>
 			    	<td class="minus">${item.ratio}</td>

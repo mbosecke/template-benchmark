@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Stock Prices - Mustache</title>
+	<title>Stock Prices</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -15,24 +14,24 @@
 			color: #333333;
 			line-height: 150%;
 		}
-		
+
 		thead {
 			font-weight: bold;
 			background-color: #CCCCCC;
 		}
-		
+
 		.odd {
 			background-color: #FFCCCC;
 		}
-		
+
 		.even {
 			background-color: #CCCCFF;
 		}
-		
+
 		.minus {
 			color: #FF0000;
 		}
-		
+
 		/*]]>*/
 	</style>
 
@@ -40,7 +39,7 @@
 
 <body>
 
-	<h1>Stock Prices - Mustache</h1>
+	<h1>Stock Prices</h1>
 
 	<table>
 		<thead>
@@ -55,19 +54,19 @@
    		</thead>
    		<tbody>
 			{{#items}}
-    		<tr class="${["odd", "even"][item_index%2]}">
-     			<td>${item_index + 1}</td>
+    		<tr class="{{rowClass}}">
+     			<td>{{index}}</td>
     			<td>
-      				<a href="/stocks/{{symbol}}">{{symbol}}</a>
+      				<a href="/stocks/{{value.symbol}}">{{value.symbol}}</a>
      			</td>
      			<td>
-      				<a href="{{url}}">{{name}}</a>
+      				<a href="{{value.url}}">{{value.name}}</a>
      			</td>
      			<td>
-      				<strong>{{price}}</strong>
+      				<strong>{{value.price}}</strong>
      			</td>
-			     <td>{{change}}</td>
-			     <td>{{ratio}}</td>
+			     <td{{negativeClass}}>{{value.change}}</td>
+			     <td{{negativeClass}}>{{value.ratio}}</td>
     		</tr>
 			{{/items}}
    		</tbody>
