@@ -14,7 +14,7 @@ import org.openjdk.jmh.annotations.Setup;
 import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.MustacheException;
 import com.github.mustachejava.MustacheFactory;
-import com.google.common.base.Function;
+import com.mitchellbosecke.benchmark.model.Stock;
 
 public class Mustache extends BaseBenchmark {
 
@@ -39,25 +39,7 @@ public class Mustache extends BaseBenchmark {
         };
         template = mustacheFactory.compile("templates/stocks.mustache.html");
         Map<String, Object> data = getContext();
-        // TODO this is not nice but I'm not aware of any better solution
-        data.put("items", new DecoratedCollection<Object>((Collection<Object>) data.get("items")));
-        data.put("negativeClass", new Function<String, String>() {
-            @Override
-            public String apply(String input) {
-                if (input == null || input.length() == 0) {
-                    return "";
-                }
-                Double value = Double.valueOf(input);
-                return value > 0 ? "" : " class=\"minus\"";
-            }
-        });
-        data.put("rowClass", new Function<String, String>() {
-            @Override
-            public String apply(String input) {
-                Integer value = Integer.valueOf(input);
-                return (value.intValue() % 2 == 0) ? "even" : "odd";
-            }
-        });
+        data.put("items", new StockCollection((Collection<Stock>) data.get("items")));
         this.context = data;
     }
 
@@ -69,22 +51,25 @@ public class Mustache extends BaseBenchmark {
     }
 
     /**
-     * This is a modified copy of {@link com.github.mustachejava.util.DecoratedCollection} - we need the first element at index 1.
+     * This is a modified copy of
+     * {@link com.github.mustachejava.util.DecoratedCollection} - we need the
+     * first element at index 1.
      *
      * @param <T>
      */
-    private class DecoratedCollection<T> extends AbstractCollection<Element<T>> {
+    private class StockCollection extends AbstractCollection<StockView> {
 
-        private final Collection<T> c;
+        private final Collection<Stock> c;
 
-        public DecoratedCollection(Collection<T> c) {
+        public StockCollection(Collection<Stock> c) {
             this.c = c;
         }
 
         @Override
-        public Iterator<Element<T>> iterator() {
-            final Iterator<T> iterator = c.iterator();
-            return new Iterator<Element<T>>() {
+        public Iterator<StockView> iterator() {
+            final Iterator<Stock> iterator = c.iterator();
+            return new Iterator<StockView>() {
+
                 int index = 1;
 
                 @Override
@@ -93,10 +78,10 @@ public class Mustache extends BaseBenchmark {
                 }
 
                 @Override
-                public Element<T> next() {
-                    T next = iterator.next();
+                public StockView next() {
+                    Stock next = iterator.next();
                     int current = index++;
-                    return new Element<T>(current, current == 1, !iterator.hasNext(), next);
+                    return new StockView(current, current == 1, !iterator.hasNext(), next);
                 }
 
                 @Override
@@ -112,17 +97,27 @@ public class Mustache extends BaseBenchmark {
         }
     }
 
-    class Element<T> {
-        public final int index;
-        public final boolean first;
-        public final boolean last;
-        public final T value;
+    class StockView {
 
-        public Element(int index, boolean first, boolean last, T value) {
+        public final int index;
+
+        public final boolean first;
+
+        public final boolean last;
+
+        public final Stock value;
+
+        public final String negativeClass;
+
+        public final String rowClass;
+
+        public StockView(int index, boolean first, boolean last, Stock value) {
             this.index = index;
             this.first = first;
             this.last = last;
             this.value = value;
+            this.negativeClass = value.getChange() > 0 ? "" : "class=\"minus\"";
+            this.rowClass = index % 2 == 0 ? "even" : "odd";
         }
     }
 

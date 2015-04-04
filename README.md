@@ -1,7 +1,7 @@
 template-benchmark
 ================
 
-JMH benchmark for the popular Java template engines:
+JMH benchmark for popular Java template engines:
 
 * Freemarker
 * Mustache

@@ -54,7 +54,7 @@
    		</thead>
    		<tbody>
 			{{#items}}
-    		<tr class="{{#rowClass}}{{index}}{{/rowClass}}">
+    		<tr class="{{rowClass}}">
      			<td>{{index}}</td>
     			<td>
       				<a href="/stocks/{{value.symbol}}">{{value.symbol}}</a>
@@ -65,8 +65,8 @@
      			<td>
       				<strong>{{value.price}}</strong>
      			</td>
-			     <td{{#negativeClass}}{{value.change}}{{/negativeClass}}>{{value.change}}</td>
-			     <td{{#negativeClass}}{{value.change}}{{/negativeClass}}>{{value.ratio}}</td>
+			     <td{{negativeClass}}>{{value.change}}</td>
+			     <td{{negativeClass}}>{{value.ratio}}</td>
     		</tr>
 			{{/items}}
    		</tbody>
