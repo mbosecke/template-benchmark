@@ -14,7 +14,8 @@ Running the benchmark
 ======================
 
 1. Download the source code and build it (`mvn clean install`)
-2. Run the benchmark suite with `java -jar target/benchmarks.jar`
+2. Run the entire benchmark suite with `java -jar target/benchmarks.jar`
+3. (Optional) To run a single benchmark, such as Mustache, use `java -jar target/benchmarks.jar Mustache`
 
 Generating plot
 ===============
