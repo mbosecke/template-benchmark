@@ -18,11 +18,8 @@ import com.mitchellbosecke.benchmark.model.Stock;
 
 public class Mustache extends BaseBenchmark {
 
-    private Map<String, Object> context;
-
     private com.github.mustachejava.Mustache template;
 
-    @SuppressWarnings("unchecked")
     @Setup
     public void setup() {
         MustacheFactory mustacheFactory = new DefaultMustacheFactory() {
@@ -38,15 +35,17 @@ public class Mustache extends BaseBenchmark {
             }
         };
         template = mustacheFactory.compile("templates/stocks.mustache.html");
-        Map<String, Object> data = getContext();
-        data.put("items", new StockCollection((Collection<Stock>) data.get("items")));
-        this.context = data;
     }
 
+    @SuppressWarnings("unchecked")
     @Benchmark
     public String benchmark() {
+
+        Map<String, Object> data = getContext();
+        data.put("items", new StockCollection((Collection<Stock>) data.get("items")));
+
         Writer writer = new StringWriter();
-        template.execute(writer, context);
+        template.execute(writer, data);
         return writer.toString();
     }
 
