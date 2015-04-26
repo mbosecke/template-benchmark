@@ -3,12 +3,12 @@ template-benchmark
 
 JMH benchmark for popular Java template engines:
 
-* Freemarker
-* Mustache
-* Pebble
-* Thymeleaf
-* Velocity
-* Trimou
+* [Freemarker](http://freemarker.org/)
+* [Mustache](https://github.com/spullara/mustache.java)
+* [Pebble](http://www.mitchellbosecke.com/pebble)
+* [Thymeleaf](http://www.thymeleaf.org/)
+* [Velocity](http://velocity.apache.org/)
+* [Trimou](http://trimou.org/)
 
 Running the benchmark
 ======================
