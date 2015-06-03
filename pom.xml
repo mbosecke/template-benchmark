@@ -21,7 +21,7 @@
 		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
 		<stringtemplate.version>4.0.2</stringtemplate.version>
 		<junit.version>4.11</junit.version>
-		<trimou.version>1.7.3.Final</trimou.version>
+		<trimou.version>1.8.0.Final</trimou.version>
 	</properties>
 
 	<licenses>

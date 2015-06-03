@@ -26,7 +26,7 @@ public class Trimou extends BaseBenchmark {
                 // Disable useless resolver
                 .setProperty(CombinedIndexResolver.ENABLED_KEY, false)
                 .addTemplateLocator(ClassPathTemplateLocator.builder(1).setRootPath("templates").setScanClasspath(false).setSuffix("trimou.html").build())
-                .registerHelpers(HelpersBuilder.extra().add("isNegative", new NumberMatchingHelper() {
+                .registerHelpers(HelpersBuilder.extra().add("isNeg", new NumberMatchingHelper() {
                     @Override
                     protected boolean isMatching(Number value) {
                         if (value instanceof Double) {
