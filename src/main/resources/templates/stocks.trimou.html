@@ -59,8 +59,8 @@ thead {
 				<td><a href="/stocks/{{symbol}}">{{symbol}}</a></td>
 				<td><a href="{{url}}">{{name}}</a></td>
 				<td><strong>{{price}}</strong></td>
-				<td{{isNegative change ' class="minus"'}}>{{change}}</td>
-				<td{{isNegative change ' class="minus"'}}>{{ratio}}</td>
+				<td{{isNeg change ' class="minus"'}}>{{change}}</td>
+				<td{{isNeg change ' class="minus"'}}>{{ratio}}</td>
 			</tr>
 			{{/items}}
 		</tbody>
