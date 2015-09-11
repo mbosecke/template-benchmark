@@ -20,7 +20,7 @@
 		<velocity.version>1.7</velocity.version>
 		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
 		<junit.version>4.11</junit.version>
-		<trimou.version>1.8.1.Final</trimou.version>
+		<trimou.version>1.8.2.Final</trimou.version>
 	</properties>
 
 	<licenses>

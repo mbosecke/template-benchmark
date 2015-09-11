@@ -54,13 +54,13 @@ thead {
 		</thead>
 		<tbody>
 			{{#items}}
-			<tr class="{{isEven iterIndex 'even' 'odd'}}">
-				<td>{{iterIndex}}</td>
+			<tr class="{{indexParity}}">
+				<td>{{index}}</td>
 				<td><a href="/stocks/{{symbol}}">{{symbol}}</a></td>
 				<td><a href="{{url}}">{{name}}</a></td>
 				<td><strong>{{price}}</strong></td>
-				<td{{isNeg change ' class="minus"'}}>{{change}}</td>
-				<td{{isNeg change ' class="minus"'}}>{{ratio}}</td>
+				<td{{minusClass change}}>{{change}}</td>
+				<td{{minusClass change}}>{{ratio}}</td>
 			</tr>
 			{{/items}}
 		</tbody>

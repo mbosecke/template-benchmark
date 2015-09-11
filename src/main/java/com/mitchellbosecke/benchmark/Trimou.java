@@ -8,8 +8,9 @@ import org.trimou.engine.MustacheEngineBuilder;
 import org.trimou.engine.config.EngineConfigurationKey;
 import org.trimou.engine.locator.ClassPathTemplateLocator;
 import org.trimou.engine.resolver.CombinedIndexResolver;
+import org.trimou.handlebars.BasicValueHelper;
 import org.trimou.handlebars.HelpersBuilder;
-import org.trimou.handlebars.NumberMatchingHelper;
+import org.trimou.handlebars.Options;
 
 public class Trimou extends BaseBenchmark {
 
@@ -19,23 +20,25 @@ public class Trimou extends BaseBenchmark {
 
     @Setup
     public void setup() {
-        template = MustacheEngineBuilder
-                .newBuilder()
+        template = MustacheEngineBuilder.newBuilder()
                 // Disable HTML escaping
                 .setProperty(EngineConfigurationKey.SKIP_VALUE_ESCAPING, true)
                 // Disable useless resolver
                 .setProperty(CombinedIndexResolver.ENABLED_KEY, false)
                 .addTemplateLocator(ClassPathTemplateLocator.builder(1).setRootPath("templates").setScanClasspath(false).setSuffix("trimou.html").build())
-                .registerHelpers(HelpersBuilder.extra().add("isNeg", new NumberMatchingHelper() {
+                .registerHelpers(HelpersBuilder.extra().build())
+                // This is a single purpose helper
+                // It's a pity we can't use JDK8 extension and SimpleHelpers util class
+                .registerHelper("minusClass", new BasicValueHelper() {
                     @Override
-                    protected boolean isMatching(Number value) {
-                        if (value instanceof Double) {
-                            return value.doubleValue() < 0;
+                    public void execute(Options options) {
+                        Object value = options.getParameters().get(0);
+                        if (value instanceof Double && ((Double) value).doubleValue() < 0) {
+                            options.append(" class=\"minus\"");
                         }
-                        // TODO other number types
-                        return false;
+                        // We don't handle any other number types
                     }
-                }).build()).build().getMustache("stocks");
+                }).build().getMustache("stocks");
         this.context = getContext();
     }
 
