@@ -21,6 +21,7 @@
 		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
 		<junit.version>4.11</junit.version>
 		<trimou.version>1.8.1.Final</trimou.version>
+        <rocker.version>0.9.0</rocker.version>
 	</properties>
 
 	<licenses>
@@ -49,6 +50,23 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>com.fizzed</groupId>
+                <artifactId>rocker-maven-plugin</artifactId>
+                <version>${rocker.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-rocker-templates</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <templateDirectory>src/main/resources</templateDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
@@ -131,6 +149,11 @@
 			<artifactId>trimou-core</artifactId>
 			<version>${trimou.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>com.fizzed</groupId>
+            <artifactId>rocker-runtime</artifactId>
+            <version>${rocker.version}</version>
+        </dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
