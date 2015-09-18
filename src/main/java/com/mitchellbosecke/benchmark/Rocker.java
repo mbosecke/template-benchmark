@@ -1,20 +1,20 @@
 package com.mitchellbosecke.benchmark;
 
-import com.mitchellbosecke.benchmark.BaseBenchmark;
 import com.mitchellbosecke.benchmark.model.Stock;
-import freemarker.cache.ClassTemplateLoader;
-import freemarker.template.Configuration;
-import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
 
 import java.io.IOException;
-import java.io.StringWriter;
-import java.io.Writer;
 import java.util.List;
-import java.util.Map;
 
+/**
+ * Benchmark for Rocker template engine by Fizzed.
+ * 
+ * https://github.com/fizzed/rocker
+ * 
+ * @author joelauer
+ */
 public class Rocker extends BaseBenchmark {
 
     private List<Stock> items;

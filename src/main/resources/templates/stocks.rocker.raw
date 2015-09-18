@@ -57,11 +57,11 @@ thead {
 		</thead>
 		<tbody>
 			@for ((ForIterator i, Stock item) : items) {
-			<tr class="@if (i.index() % 2 == 0) {even} else {odd}">
-				<td>@i.index()</td>
+			<tr class="@if (i.index() % 2 == 0) {odd} else {even}">
+				<td>@Integer.toString(i.index()+1)</td>
 				<td><a href="/stocks/@item.getSymbol()">@item.getSymbol()</a></td>
 				<td><a href="@item.getUrl()">@item.getName()</a></td>
-				<td><strong>item.getPrice()</strong></td>@if (item.getChange() < 0.0) {
+				<td><strong>@item.getPrice()</strong></td>@if (item.getChange() < 0.0) {
 				<td class="minus">@item.getChange()</td>
 				<td class="minus">@item.getRatio()</td>} else {
 				<td>@item.getChange()</td>
