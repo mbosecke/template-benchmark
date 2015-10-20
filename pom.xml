@@ -21,6 +21,7 @@
 		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
 		<junit.version>4.11</junit.version>
 		<trimou.version>1.8.1.Final</trimou.version>
+                <moshas.version>0.1.0-SNAPSHOT</moshas.version>
 	</properties>
 
 	<licenses>
@@ -45,8 +46,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -131,6 +132,11 @@
 			<artifactId>trimou-core</artifactId>
 			<version>${trimou.version}</version>
 		</dependency>
+                <dependency>
+                    <groupId>net.unit8.moshas</groupId>
+                    <artifactId>moshas</artifactId>
+                    <version>${moshas.version}</version>
+                </dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
