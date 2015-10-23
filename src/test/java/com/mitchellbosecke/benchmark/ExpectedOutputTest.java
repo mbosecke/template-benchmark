@@ -67,7 +67,14 @@ public class ExpectedOutputTest {
         assertOutput(trimou.benchmark());
     }
 
-    private void assertOutput(String output) throws IOException {
+    @Test
+    public void testHbsOutput() throws IOException {
+        Handlebars hbs = new Handlebars();
+        hbs.setup();
+        assertOutput(hbs.benchmark());
+    }
+
+    private void assertOutput(final String output) throws IOException {
         assertEquals(readExpectedOutputResource(), output.replaceAll("\\s", ""));
     }
 
@@ -76,8 +83,9 @@ public class ExpectedOutputTest {
         try (BufferedReader in = new BufferedReader(new InputStreamReader(ExpectedOutputTest.class.getResourceAsStream("/expected-output.html")))) {
             for (;;) {
                 String line = in.readLine();
-                if (line == null)
-                    break;
+                if (line == null) {
+                  break;
+                }
                 builder.append(line);
             }
         }
