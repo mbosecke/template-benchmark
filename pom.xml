@@ -21,6 +21,7 @@
 		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
 		<junit.version>4.11</junit.version>
 		<trimou.version>1.8.2.Final</trimou.version>
+		<hbs.version>2.3.2</hbs.version>
 		<rocker.version>0.9.0</rocker.version>
 	</properties>
 
@@ -148,6 +149,11 @@
 			<groupId>org.trimou</groupId>
 			<artifactId>trimou-core</artifactId>
 			<version>${trimou.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.jknack</groupId>
+			<artifactId>handlebars</artifactId>
+			<version>${hbs.version}</version>
 		</dependency>
         <dependency>
             <groupId>com.fizzed</groupId>
