@@ -31,6 +31,13 @@ public class ExpectedOutputTest {
         freemarker.setup();
         assertOutput(freemarker.benchmark());
     }
+    
+    @Test
+    public void testRockerOutput() throws IOException, TemplateException {
+        Rocker rocker = new Rocker();
+        rocker.setup();
+        assertOutput(rocker.benchmark());
+    }
 
     @Test
     public void testPebbleOutput() throws IOException, PebbleException {
