@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<name>Template Benchmark</name>
 	<description>JMH Benchmark of Popular Template Engines</description>
@@ -50,23 +50,23 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>com.fizzed</groupId>
-				<artifactId>rocker-maven-plugin</artifactId>
-				<version>${rocker.version}</version>
-				<executions>
-					<execution>
-						<id>generate-rocker-templates</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<templateDirectory>src/main/resources</templateDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+            <plugin>
+                <groupId>com.fizzed</groupId>
+                <artifactId>rocker-maven-plugin</artifactId>
+                <version>${rocker.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-rocker-templates</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <templateDirectory>src/main/resources</templateDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
@@ -81,7 +81,7 @@
 							<finalName>${uberjar.name}</finalName>
 							<transformers>
 								<transformer
-										implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<mainClass>org.openjdk.jmh.Main</mainClass>
 								</transformer>
 							</transformers>
@@ -149,11 +149,11 @@
 			<artifactId>trimou-core</artifactId>
 			<version>${trimou.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.fizzed</groupId>
-			<artifactId>rocker-runtime</artifactId>
-			<version>${rocker.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>com.fizzed</groupId>
+            <artifactId>rocker-runtime</artifactId>
+            <version>${rocker.version}</version>
+        </dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
