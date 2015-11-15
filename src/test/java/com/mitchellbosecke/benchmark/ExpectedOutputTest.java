@@ -81,6 +81,13 @@ public class ExpectedOutputTest {
         assertOutput(hbs.benchmark());
     }
 
+    @Test
+    public void testTwirlOutput() throws IOException {
+        Twirl twirl = new Twirl();
+        twirl.setup();
+        assertOutput(twirl.benchmark());
+    }
+
     private void assertOutput(final String output) throws IOException {
         assertEquals(readExpectedOutputResource(), output.replaceAll("\\s", ""));
     }
