@@ -117,9 +117,6 @@
 						</goals>
 						<configuration>
 							<templateDirectory>src/main/resources</templateDirectory>
-							<imports>
-								<import>com.mitchellbosecke.benchmark.model.Stock</import>
-							</imports>
 						</configuration>
 					</execution>
 				</executions>
@@ -220,6 +217,11 @@
 			<groupId>com.typesafe.play</groupId>
 			<artifactId>twirl-api_2.11</artifactId>
 			<version>${twirl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.jknack</groupId>
+			<artifactId>handlebars-jackson2</artifactId>
+			<version>${hbs.version}</version>
 		</dependency>
 
 		<dependency>

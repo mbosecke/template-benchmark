@@ -82,6 +82,13 @@ public class ExpectedOutputTest {
     }
 
     @Test
+    public void testHbsJsonOutput() throws IOException {
+        HandlebarsJson hbs = new HandlebarsJson();
+        hbs.setup();
+        assertOutput(hbs.benchmark());
+    }
+
+    @Test
     public void testTwirlOutput() throws IOException {
         Twirl twirl = new Twirl();
         twirl.setup();
