@@ -11,7 +11,7 @@ import org.openjdk.jmh.annotations.Setup;
 
 import java.io.IOException;
 
-public class HandlebarsJson extends BaseBenchmark {
+public class JsonHandlebars extends BaseBenchmark {
 
   private Context context;
 

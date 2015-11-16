@@ -82,8 +82,8 @@ public class ExpectedOutputTest {
     }
 
     @Test
-    public void testHbsJsonOutput() throws IOException {
-        HandlebarsJson hbs = new HandlebarsJson();
+    public void testJsonHbsOutput() throws IOException {
+        JsonHandlebars hbs = new JsonHandlebars();
         hbs.setup();
         assertOutput(hbs.benchmark());
     }
