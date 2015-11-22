@@ -33,7 +33,7 @@ public class Trimou extends BaseBenchmark {
                     @Override
                     public void execute(Options options) {
                         Object value = options.getParameters().get(0);
-                        if (value instanceof Double && ((Double) value).doubleValue() < 0) {
+                        if (value instanceof Double && (Double) value < 0) {
                             options.append(" class=\"minus\"");
                         }
                         // We don't handle any other number types

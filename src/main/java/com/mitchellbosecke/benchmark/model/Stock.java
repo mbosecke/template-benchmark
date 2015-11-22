@@ -5,19 +5,19 @@ import java.util.List;
 
 public class Stock {
 
-    public String name;
+    private String name;
 
-    public String name2;
+    private String name2;
 
-    public String url;
+    private String url;
 
-    public String symbol;
+    private String symbol;
 
-    public double price;
+    private double price;
 
-    public double change;
+    private double change;
 
-    public double ratio;
+    private double ratio;
 
     public Stock(String name, String name2, String url, String symbol, double price, double change, double ratio) {
         this.name = name;
