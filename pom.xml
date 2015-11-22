@@ -11,18 +11,18 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jmh.version>1.7.1</jmh.version>
+		<jmh.version>1.11.2</jmh.version>
 		<uberjar.name>benchmarks</uberjar.name>
 
-		<pebble.version>1.5.2</pebble.version>
-		<mustache.version>0.9.0</mustache.version>
-		<freemarker.version>2.3.22</freemarker.version>
+		<pebble.version>1.6.0</pebble.version>
+		<mustache.version>0.9.1</mustache.version>
+		<freemarker.version>2.3.23</freemarker.version>
 		<velocity.version>1.7</velocity.version>
 		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
-		<junit.version>4.11</junit.version>
+		<junit.version>4.12</junit.version>
 		<trimou.version>1.8.2.Final</trimou.version>
-		<hbs.version>2.3.2</hbs.version>
-		<rocker.version>0.9.0</rocker.version>
+		<hbs.version>4.0.1</hbs.version>
+		<rocker.version>0.10.3</rocker.version>
 	</properties>
 
 	<licenses>
@@ -45,7 +45,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.1</version>
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
@@ -71,7 +71,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.2</version>
+				<version>2.4.2</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
