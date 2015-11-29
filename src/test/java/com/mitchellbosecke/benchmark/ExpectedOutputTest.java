@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Locale;
 
+import com.hubspot.jinjava.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -79,6 +80,13 @@ public class ExpectedOutputTest {
         Handlebars hbs = new Handlebars();
         hbs.setup();
         assertOutput(hbs.benchmark());
+    }
+
+    @Test
+    public void testJinjavaOutput() throws IOException {
+        Jinjava jinjava = new Jinjava();
+        jinjava.setup();
+        assertOutput(jinjava.benchmark());
     }
 
     private void assertOutput(final String output) throws IOException {

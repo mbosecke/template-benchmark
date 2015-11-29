@@ -23,6 +23,7 @@
 		<trimou.version>1.8.2.Final</trimou.version>
 		<hbs.version>4.0.1</hbs.version>
 		<rocker.version>0.10.3</rocker.version>
+		<jinjava.version>2.1.0</jinjava.version>
 	</properties>
 
 	<licenses>
@@ -160,6 +161,12 @@
             <artifactId>rocker-runtime</artifactId>
             <version>${rocker.version}</version>
         </dependency>
+		<dependency>
+			<groupId>com.hubspot.jinjava</groupId>
+			<artifactId>jinjava</artifactId>
+			<version>${jinjava.version}</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>junit</groupId>
