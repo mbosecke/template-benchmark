@@ -81,6 +81,13 @@ public class ExpectedOutputTest {
         assertOutput(hbs.benchmark());
     }
 
+    @Test
+    public void testRythmOutput() throws IOException {
+        Rythm rythm = new Rythm();
+        rythm.setup();
+        assertOutput(rythm.benchmark());
+    }
+
     private void assertOutput(final String output) throws IOException {
         assertEquals(readExpectedOutputResource(), output.replaceAll("\\s", ""));
     }
