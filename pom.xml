@@ -161,11 +161,11 @@
 			<artifactId>rocker-runtime</artifactId>
 			<version>${rocker.version}</version>
 		</dependency>
-        <dependency>
+		<dependency>
 			<groupId>org.rythmengine</groupId>
 			<artifactId>rythm-engine</artifactId>
 			<version>${rythm.version}</version>
-        </dependency>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
