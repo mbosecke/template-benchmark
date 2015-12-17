@@ -23,6 +23,7 @@
 		<trimou.version>1.8.2.Final</trimou.version>
 		<hbs.version>4.0.1</hbs.version>
 		<rocker.version>0.10.3</rocker.version>
+		<rythm.version>1.0.1</rythm.version>
 	</properties>
 
 	<licenses>
@@ -159,6 +160,11 @@
             <groupId>com.fizzed</groupId>
             <artifactId>rocker-runtime</artifactId>
             <version>${rocker.version}</version>
+        </dependency>
+        <dependency>
+			<groupId>org.rythmengine</groupId>
+			<artifactId>rythm-engine</artifactId>
+            <version>${rythm.version}</version>
         </dependency>
 
 		<dependency>

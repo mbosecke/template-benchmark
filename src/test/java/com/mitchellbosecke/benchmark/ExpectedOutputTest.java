@@ -1,18 +1,14 @@
 package com.mitchellbosecke.benchmark;
 
-import static org.junit.Assert.assertEquals;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Locale;
-
+import com.mitchellbosecke.pebble.error.PebbleException;
+import freemarker.template.TemplateException;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.mitchellbosecke.pebble.error.PebbleException;
+import java.io.IOException;
+import java.util.Locale;
 
-import freemarker.template.TemplateException;
+import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -31,7 +27,7 @@ public class ExpectedOutputTest {
         freemarker.setup();
         assertOutput(freemarker.benchmark());
     }
-    
+
     @Test
     public void testRockerOutput() throws IOException, TemplateException {
         Rocker rocker = new Rocker();
@@ -81,23 +77,15 @@ public class ExpectedOutputTest {
         assertOutput(hbs.benchmark());
     }
 
-    private void assertOutput(final String output) throws IOException {
-        assertEquals(readExpectedOutputResource(), output.replaceAll("\\s", ""));
+    @Test
+    public void testRythmOutput() throws IOException {
+        Rythm rythm = new Rythm();
+        rythm.setup();
+        assertOutput(rythm.benchmark());
     }
 
-    private String readExpectedOutputResource() throws IOException {
-        StringBuilder builder = new StringBuilder();
-        try (BufferedReader in = new BufferedReader(new InputStreamReader(ExpectedOutputTest.class.getResourceAsStream("/expected-output.html")))) {
-            for (;;) {
-                String line = in.readLine();
-                if (line == null) {
-                  break;
-                }
-                builder.append(line);
-            }
-        }
-        // Remove all whitespaces
-        return builder.toString().replaceAll("\\s", "");
+    private void assertOutput(final String output) throws IOException {
+        assertEquals(Utils.readResource("expected-output.html").replaceAll("\\s", ""), output.replaceAll("\\s", ""));
     }
 
 }

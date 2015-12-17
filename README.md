@@ -7,6 +7,7 @@ JMH benchmark for popular Java template engines:
 * [Mustache](https://github.com/spullara/mustache.java)
 * [Pebble](http://www.mitchellbosecke.com/pebble)
 * [Rocker](https://github.com/fizzed/rocker)
+* [Rythm](http://rythmengine.org/)
 * [Thymeleaf](http://www.thymeleaf.org/)
 * [Trimou](http://trimou.org/)
 * [Velocity](http://velocity.apache.org/)
