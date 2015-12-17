@@ -156,15 +156,15 @@
 			<artifactId>handlebars</artifactId>
 			<version>${hbs.version}</version>
 		</dependency>
-        <dependency>
-            <groupId>com.fizzed</groupId>
-            <artifactId>rocker-runtime</artifactId>
-            <version>${rocker.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>com.fizzed</groupId>
+			<artifactId>rocker-runtime</artifactId>
+			<version>${rocker.version}</version>
+		</dependency>
         <dependency>
 			<groupId>org.rythmengine</groupId>
 			<artifactId>rythm-engine</artifactId>
-            <version>${rythm.version}</version>
+			<version>${rythm.version}</version>
         </dependency>
 
 		<dependency>
