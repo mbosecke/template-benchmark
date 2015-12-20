@@ -6,6 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
@@ -82,6 +83,13 @@ public class ExpectedOutputTest {
         Rythm rythm = new Rythm();
         rythm.setup();
         assertOutput(rythm.benchmark());
+    }
+
+    @Test
+    public void testHttlOutput() throws IOException, ParseException {
+        Httl httl = new Httl();
+        httl.setup();
+        assertOutput(httl.benchmark());
     }
 
     private void assertOutput(final String output) throws IOException {
