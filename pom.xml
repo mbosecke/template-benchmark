@@ -24,6 +24,7 @@
 		<hbs.version>4.0.1</hbs.version>
 		<rocker.version>0.10.3</rocker.version>
 		<rythm.version>1.0.1</rythm.version>
+		<chunk.version>3.1.2</chunk.version>
 	</properties>
 
 	<licenses>
@@ -165,6 +166,11 @@
 			<groupId>org.rythmengine</groupId>
 			<artifactId>rythm-engine</artifactId>
 			<version>${rythm.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.x5dev</groupId>
+			<artifactId>chunk-templates</artifactId>
+			<version>${chunk.version}</version>
 		</dependency>
 
 		<dependency>
