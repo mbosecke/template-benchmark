@@ -5,6 +5,7 @@ JMH benchmark for popular Java template engines:
 
 * [Chunk](https://github.com/tomj74/chunk-templates/)
 * [Freemarker](http://freemarker.org/)
+* [HTTL](http://httl.github.io/en/)
 * [Mustache](https://github.com/spullara/mustache.java)
 * [Pebble](http://www.mitchellbosecke.com/pebble)
 * [Rocker](https://github.com/fizzed/rocker)

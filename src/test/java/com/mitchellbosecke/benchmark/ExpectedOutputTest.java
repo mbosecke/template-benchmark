@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.text.ParseException;
 import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
@@ -90,6 +91,13 @@ public class ExpectedOutputTest {
         Chunk chunk = new Chunk();
         chunk.setup();
         assertOutput(chunk.benchmark());
+    }
+
+    @Test
+    public void testHttlOutput() throws IOException, ParseException {
+        Httl httl = new Httl();
+        httl.setup();
+        assertOutput(httl.benchmark());
     }
 
     private void assertOutput(final String output) throws IOException {
