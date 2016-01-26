@@ -3,7 +3,6 @@ template-benchmark
 
 JMH benchmark for popular Java template engines:
 
-* [Chunk](https://github.com/tomj74/chunk-templates/)
 * [Freemarker](http://freemarker.org/)
 * [Handlebars](http://www.handlebarsjs.com/)
 * [HTTL](http://httl.github.io/en/)

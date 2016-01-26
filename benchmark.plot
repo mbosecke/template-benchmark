@@ -6,7 +6,6 @@ set xtics nomirror rotate by -45
 
 # Ranges
 set autoscale
-set logscale y
 
 # Input
 set datafile separator ','
