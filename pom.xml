@@ -25,6 +25,7 @@
 		<rocker.version>0.10.3</rocker.version>
 		<rythm.version>1.0.1</rythm.version>
 		<httl.version>1.0.11</httl.version>
+		<chunk.version>3.2.0</chunk.version>
 	</properties>
 
 	<licenses>
@@ -171,6 +172,11 @@
 			<groupId>com.github.httl</groupId>
 			<artifactId>httl-springmvc</artifactId>
 			<version>${httl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.x5dev</groupId>
+			<artifactId>chunk-templates</artifactId>
+			<version>${chunk.version}</version>
 		</dependency>
 
 		<dependency>

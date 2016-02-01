@@ -6,6 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.text.ParseException;
 import java.util.Locale;
 
@@ -83,6 +84,13 @@ public class ExpectedOutputTest {
         Rythm rythm = new Rythm();
         rythm.setup();
         assertOutput(rythm.benchmark());
+    }
+
+    @Test
+    public void testChunkOutput() throws IOException, URISyntaxException {
+        Chunk chunk = new Chunk();
+        chunk.setup();
+        assertOutput(chunk.benchmark());
     }
 
     @Test
