@@ -1,16 +1,14 @@
 package com.mitchellbosecke.benchmark;
 
-import java.io.IOException;
-import java.io.StringWriter;
-import java.util.Map;
-
+import com.mitchellbosecke.pebble.PebbleEngine;
+import com.mitchellbosecke.pebble.error.PebbleException;
+import com.mitchellbosecke.pebble.template.PebbleTemplate;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
 
-import com.mitchellbosecke.pebble.PebbleEngine;
-import com.mitchellbosecke.pebble.error.PebbleException;
-import com.mitchellbosecke.pebble.extension.escaper.EscaperExtension;
-import com.mitchellbosecke.pebble.template.PebbleTemplate;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.Map;
 
 public class Pebble extends BaseBenchmark {
 
@@ -20,8 +18,7 @@ public class Pebble extends BaseBenchmark {
 
     @Setup
     public void setup() throws PebbleException {
-        PebbleEngine engine = new PebbleEngine();
-        engine.getExtension(EscaperExtension.class).setAutoEscaping(false);
+        PebbleEngine engine = new PebbleEngine.Builder().autoEscaping(false).build();
         template = engine.getTemplate("templates/stocks.pebble.html");
         this.context = getContext();
     }
