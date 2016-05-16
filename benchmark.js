@@ -16,6 +16,7 @@ var handlebars = require('./handlebars/handlebars.js');
 var coffeekup = require('./coffeekup/coffeekup.js');
 var underscore = require('./underscore/underscore.js');
 var gaikan = require('./gaikan/gaikan.js');
+var mustache = require('./mustache/mustache.js');
 
 var test = function(name, sample, cb) {
 	var i = 0;
@@ -59,10 +60,11 @@ var samples = [
 	{ name : 'CoffeeKup', sample : coffeekup },
 	{ name : 'Jade without `with`', sample : jadeWithoutWith },
 	{ name : 'Handlebars.js', sample : handlebars },
+	{ name : 'Mustache.js', sample : mustache },
 	{ name : 'Eco', sample : eco },
 	{ name : 'EJS', sample : ejs },
 	{ name : 'Underscore', sample : underscore },
-	{ name : 'Swig', sample : swig },
+	//{ name : 'Swig', sample : swig },
 	{ name : 'doT', sample : dot },
 	{ name : 'EJS without `with`', sample : ejsWithoutWith },
 	{ name : 'Fest', sample : fest },

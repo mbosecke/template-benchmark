@@ -2,19 +2,21 @@ var swig = require('swig');
 var compiled;
 var tplData;
 
-swig.init({
-	root: __dirname
-});
+//swig.init({
+//	root: __dirname
+//});
 
 module.exports.prepare = function (data, done) {
 	tplData = data;
-	compiled = swig.compileFile('./tpl_escaped.swig');
+	//console.log(tplData);
+	compiled = swig.compileFile(_dirname + './tpl_escaped.swig');
+	//console.log(compiled);
 	done();
 };
 
 module.exports.prepareUnescaped = function (data, done) {
 	tplData = data;
-	compiled = swig.compileFile('./tpl_unescaped.swig');
+	compiled = swig.compileFile(_dirname + './tpl_unescaped.swig');
 	done();
 };
 
