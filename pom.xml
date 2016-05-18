@@ -18,7 +18,7 @@
 		<mustache.version>0.9.1</mustache.version>
 		<freemarker.version>2.3.23</freemarker.version>
 		<velocity.version>1.7</velocity.version>
-		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
 		<junit.version>4.12</junit.version>
 		<trimou.version>1.8.2.Final</trimou.version>
 		<hbs.version>4.0.1</hbs.version>
