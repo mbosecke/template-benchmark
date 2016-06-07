@@ -25,19 +25,19 @@ public class ExpectedOutputTest {
         Locale.setDefault(Locale.ENGLISH);
     }
 
-//    @Test
-//    public void testFreemarkerOutput() throws IOException, TemplateException {
-//        Freemarker freemarker = new Freemarker();
-//        freemarker.setup();
-//        assertOutput(freemarker.benchmark());
-//    }
+    @Test
+    public void testFreemarkerOutput() throws IOException, TemplateException {
+        Freemarker freemarker = new Freemarker();
+        freemarker.setup();
+        assertOutput(freemarker.benchmark());
+    }
 //    
-//    @Test
-//    public void testRockerOutput() throws IOException, TemplateException {
-//        Rocker rocker = new Rocker();
-//        rocker.setup();
-//        assertOutput(rocker.benchmark());
-//    }
+    @Test
+    public void testRockerOutput() throws IOException, TemplateException {
+        Rocker rocker = new Rocker();
+        rocker.setup();
+        assertOutput(rocker.benchmark());
+    }
 //
 //    @Test
 //    public void testPebbleOutput() throws IOException, PebbleException {

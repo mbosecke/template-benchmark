@@ -14,57 +14,50 @@ import org.beetl.core.resource.ClasspathResourceLoader;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
 
-
-
-
 public class Beetl extends BaseBenchmark {
 
-    private Map<String, Object> context;
+	private Map<String, Object> context;
 
-    private Template template;
+	GroupTemplate gt = null;
 
-    @Setup
-    public void setup() throws IOException {
-    	ClasspathResourceLoader resourceLoader = new MyClasspathResourceLoader("/");
-    	Configuration cfg = Configuration.defaultConfiguration();
-    	cfg.setStatementStart("@");
-    	cfg.setStatementEnd(null);
-    	cfg.getResourceMap().put("autoCheck", "false");
-    	GroupTemplate gt = new GroupTemplate(resourceLoader, cfg);
-    	template = gt.getTemplate("/templates/stocks.beetl.html");
-    	template.binding(getContext());
-    }
+	@Setup
+	public void setup() throws IOException {
+		ClasspathResourceLoader resourceLoader = new MyClasspathResourceLoader("/");
+		Configuration cfg = Configuration.defaultConfiguration();
+		cfg.setStatementStart("@");
+		cfg.setStatementEnd(null);
+		cfg.getResourceMap().put("autoCheck", "false");
+		gt = new GroupTemplate(resourceLoader, cfg);
 
-    @Benchmark
-    public String benchmark() throws IOException {
-        Writer writer = new StringWriter();
-        template.renderTo(writer);
-       
-        return writer.toString();
-    }
+	}
 
-    static class MyClasspathResourceLoader extends ClasspathResourceLoader{
-    	
-    	public MyClasspathResourceLoader(String root)
-    	{
-    		super(root);
-    	}
-    	@Override
-    	public void init(GroupTemplate gt)
-    	{
-    		Map<String, String> resourceMap = gt.getConf().getResourceMap();
-    		
+	@Benchmark
+	public String benchmark() throws IOException {
+		Template template = gt.getTemplate("/templates/stocks.beetl.html");
+		template.binding(getContext());
+		Writer writer = new StringWriter();
+		template.renderTo(writer);
 
-    		if (this.charset == null)
-    		{
-    			this.charset = resourceMap.get("charset");
+		return writer.toString();
+	}
 
-    		}
+	static class MyClasspathResourceLoader extends ClasspathResourceLoader {
 
-    	
-    		this.setAutoCheck(false);
-    		
+		public MyClasspathResourceLoader(String root) {
+			super(root);
+		}
 
-    	}
-    }
+		@Override
+		public void init(GroupTemplate gt) {
+			Map<String, String> resourceMap = gt.getConf().getResourceMap();
+
+			if (this.charset == null) {
+				this.charset = resourceMap.get("charset");
+
+			}
+
+			this.setAutoCheck(false);
+
+		}
+	}
 }
