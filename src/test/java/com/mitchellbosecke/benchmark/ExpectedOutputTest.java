@@ -80,6 +80,14 @@ public class ExpectedOutputTest {
         hbs.setup();
         assertOutput(hbs.benchmark());
     }
+    
+    
+    @Test
+    public void testBeetl() throws IOException {
+        Beetl beetl = new Beetl();
+        beetl.setup();
+        assertOutput(beetl.benchmark());
+    }
 
     private void assertOutput(final String output) throws IOException {
         assertEquals(readExpectedOutputResource(), output.replaceAll("\\s", ""));
