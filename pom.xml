@@ -25,7 +25,7 @@
 		<rocker.version>0.10.3</rocker.version>
 		<rythm.version>1.0.1</rythm.version>
 		<httl.version>1.0.11</httl.version>
-		<chunk.version>3.2.1</chunk.version>
+		<chunk.version>3.2.3</chunk.version>
 	</properties>
 
 	<licenses>

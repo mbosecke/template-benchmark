@@ -53,7 +53,7 @@
     </tr>
     </thead>
     <tbody>
-    {% loop in $items as $item counter=$i,1 counter_tags="true" %}
+    {% loop in $items as $item counter=$i,1 %}
     <tr class="{% $i|alternate(even,odd) %}">
         <td>{$i}</td>
         <td><a href="/stocks/{$item.symbol}">{$item.symbol}</a></td>
