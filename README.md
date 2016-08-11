@@ -4,6 +4,7 @@ template-benchmark
 JMH benchmark for popular Java template engines:
 
 * [Freemarker](http://freemarker.org/)
+* [Handlebars](https://github.com/jknack/handlebars.java)
 * [Mustache](https://github.com/spullara/mustache.java)
 * [Pebble](http://www.mitchellbosecke.com/pebble)
 * [Rocker](https://github.com/fizzed/rocker)
