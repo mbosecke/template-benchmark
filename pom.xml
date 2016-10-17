@@ -18,11 +18,14 @@
 		<mustache.version>0.9.1</mustache.version>
 		<freemarker.version>2.3.23</freemarker.version>
 		<velocity.version>1.7</velocity.version>
-		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.0.BETA01</thymeleaf.version>
 		<junit.version>4.12</junit.version>
 		<trimou.version>1.8.2.Final</trimou.version>
 		<hbs.version>4.0.1</hbs.version>
 		<rocker.version>0.10.3</rocker.version>
+		<rythm.version>1.0.1</rythm.version>
+		<httl.version>1.0.11</httl.version>
+		<chunk.version>3.1.2</chunk.version>
 	</properties>
 
 	<licenses>
@@ -155,11 +158,26 @@
 			<artifactId>handlebars</artifactId>
 			<version>${hbs.version}</version>
 		</dependency>
-        <dependency>
-            <groupId>com.fizzed</groupId>
-            <artifactId>rocker-runtime</artifactId>
-            <version>${rocker.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>com.fizzed</groupId>
+			<artifactId>rocker-runtime</artifactId>
+			<version>${rocker.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.rythmengine</groupId>
+			<artifactId>rythm-engine</artifactId>
+			<version>${rythm.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.x5dev</groupId>
+			<artifactId>chunk-templates</artifactId>
+			<version>${chunk.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.httl</groupId>
+			<artifactId>httl-springmvc</artifactId>
+			<version>${httl.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
