@@ -23,6 +23,7 @@
 		<trimou.version>1.8.2.Final</trimou.version>
 		<hbs.version>4.0.1</hbs.version>
 		<rocker.version>0.10.3</rocker.version>
+		<jetg.version>1.0.0</jetg.version>
 	</properties>
 
 	<licenses>
@@ -160,7 +161,11 @@
             <artifactId>rocker-runtime</artifactId>
             <version>${rocker.version}</version>
         </dependency>
-
+		<dependency>
+			<groupId>com.dyuproject.jetg</groupId>
+			<artifactId>jetg</artifactId>
+			<version>${jetg.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
