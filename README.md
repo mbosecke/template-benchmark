@@ -10,6 +10,7 @@ JMH benchmark for popular Java template engines:
 * [Thymeleaf](http://www.thymeleaf.org/)
 * [Trimou](http://trimou.org/)
 * [Velocity](http://velocity.apache.org/)
+* [Jetg](https://github.com/fbsgen/jetg/)
 
 Running the benchmark
 ======================
