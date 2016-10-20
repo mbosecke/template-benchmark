@@ -80,6 +80,13 @@ public class ExpectedOutputTest {
         hbs.setup();
         assertOutput(hbs.benchmark());
     }
+    
+    @Test
+    public void testJetgOutput() throws IOException, PebbleException {
+        Jetg jetg = new Jetg();
+        jetg.setup();
+        assertOutput(jetg.benchmark());
+    }
 
     private void assertOutput(final String output) throws IOException {
         assertEquals(readExpectedOutputResource(), output.replaceAll("\\s", ""));
