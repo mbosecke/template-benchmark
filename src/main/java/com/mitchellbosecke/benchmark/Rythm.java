@@ -18,6 +18,7 @@ public class Rythm extends BaseBenchmark {
         Properties properties = new Properties();
         properties.put("log.enabled", false);
         properties.put("feature.smart_escape.enabled", false);
+        properties.put("feature.transform.enabled", false);
         engine = new RythmEngine(properties);
 
         template = Utils.readResource("templates/stocks.rythm.html");
