@@ -9,6 +9,10 @@
 	<artifactId>template-benchmark</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<prerequisites>
+		<maven>3.3.3</maven>
+	</prerequisites>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jmh.version>1.12</jmh.version>
@@ -27,8 +31,9 @@
 		<httl.version>1.0.11</httl.version>
 		<chunk.version>3.2.3</chunk.version>
 		<twirl.version>1.1.1</twirl.version>
-                <moshas.version>0.1.0-SNAPSHOT</moshas.version>
+		<moshas.version>0.2.0</moshas.version>
 		<jinjava.version>2.1.0</jinjava.version>
+		<beetl.version>2.5.3</beetl.version>
 	</properties>
 
 	<licenses>
@@ -49,15 +54,15 @@
 	<build>
 		<finalName>template-benchmark</finalName>
 		<pluginManagement>
-		<plugins>
-			<plugin>
+			<plugins>
+				<plugin>
 					<groupId>net.alchim31.maven</groupId>
 					<artifactId>scala-maven-plugin</artifactId>
-					<version>3.2.1</version>
+					<version>3.2.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
+					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.1</version>
 				</plugin>
 			</plugins>
@@ -92,23 +97,23 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-            <plugin>
-                <groupId>com.fizzed</groupId>
-                <artifactId>rocker-maven-plugin</artifactId>
-                <version>${rocker.version}</version>
-                <executions>
-                    <execution>
-                        <id>generate-rocker-templates</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <templateDirectory>src/main/resources</templateDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+			<plugin>
+				<groupId>com.fizzed</groupId>
+				<artifactId>rocker-maven-plugin</artifactId>
+				<version>${rocker.version}</version>
+				<executions>
+					<execution>
+						<id>generate-rocker-templates</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<templateDirectory>src/main/resources</templateDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>com.jakewharton.twirl</groupId>
 				<artifactId>twirl-maven-plugin</artifactId>
@@ -155,6 +160,26 @@
 									</excludes>
 								</filter>
 							</filters>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.12</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.build.directory}/generated-sources/rocker</source>
+								<source>${project.build.directory}/generated-sources/twirl</source>
+							</sources>
 						</configuration>
 					</execution>
 				</executions>
@@ -208,11 +233,6 @@
 			<artifactId>trimou-core</artifactId>
 			<version>${trimou.version}</version>
 		</dependency>
-                <dependency>
-                    <groupId>net.unit8.moshas</groupId>
-                    <artifactId>moshas</artifactId>
-                    <version>${moshas.version}</version>
-                </dependency>
 		<dependency>
 			<groupId>com.github.jknack</groupId>
 			<artifactId>handlebars</artifactId>
@@ -253,8 +273,6 @@
 			<artifactId>chunk-templates</artifactId>
 			<version>${chunk.version}</version>
 		</dependency>
-
-
 		<dependency>
 			<groupId>com.ibeetl</groupId>
 			<artifactId>beetl</artifactId>

@@ -118,13 +118,6 @@ public class ExpectedOutputTest {
         assertOutput(hbs.benchmark());
     }
     
-    @Test
-    public void testMoshas() throws IOException {
-        Moshas moshas = new Moshas();
-        moshas.setup();
-        assertOutput(moshas.benchmark());
-    }
-
     private void assertOutput(String output) throws IOException {
         assertEquals(readExpectedOutputResource().toLowerCase(), output.replaceAll("\\s", "").toLowerCase());
     @Test
