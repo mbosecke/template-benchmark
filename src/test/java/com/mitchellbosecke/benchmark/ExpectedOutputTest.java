@@ -108,6 +108,20 @@ public class ExpectedOutputTest {
         assertOutput(httl.benchmark());
     }
 
+    @Test
+    public void testJsonHbsOutput() throws IOException {
+        JsonHandlebars hbs = new JsonHandlebars();
+        hbs.setup();
+        assertOutput(hbs.benchmark());
+    }
+
+    @Test
+    public void testTwirlOutput() throws IOException {
+        Twirl twirl = new Twirl();
+        twirl.setup();
+        assertOutput(twirl.benchmark());
+    }
+
     private void assertOutput(final String output) throws IOException {
         assertEquals(Utils.readResource("expected-output.html").replaceAll("\\s", ""), output.replaceAll("\\s", ""));
     }

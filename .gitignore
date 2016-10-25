@@ -6,3 +6,6 @@ target/
 *.war
 *.ear
 .project
+.idea/
+.idea_modules/
+*.iml

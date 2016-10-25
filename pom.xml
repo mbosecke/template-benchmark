@@ -26,6 +26,7 @@
 		<rythm.version>1.0.1</rythm.version>
 		<httl.version>1.0.11</httl.version>
 		<chunk.version>3.2.3</chunk.version>
+		<twirl.version>1.1.1</twirl.version>
 	</properties>
 
 	<licenses>
@@ -45,7 +46,42 @@
 
 	<build>
 		<finalName>template-benchmark</finalName>
+		<pluginManagement>
 		<plugins>
+			<plugin>
+					<groupId>net.alchim31.maven</groupId>
+					<artifactId>scala-maven-plugin</artifactId>
+					<version>3.2.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>scala-compile-first</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>add-source</goal>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>scala-test-compile</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
@@ -71,6 +107,23 @@
                     </execution>
                 </executions>
             </plugin>
+			<plugin>
+				<groupId>com.jakewharton.twirl</groupId>
+				<artifactId>twirl-maven-plugin</artifactId>
+				<version>1.0.4</version>
+				<executions>
+					<execution>
+						<id>generate-twirl-templates</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<templateDirectory>src/main/resources</templateDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
@@ -162,6 +215,16 @@
 			<groupId>com.fizzed</groupId>
 			<artifactId>rocker-runtime</artifactId>
 			<version>${rocker.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.typesafe.play</groupId>
+			<artifactId>twirl-api_2.11</artifactId>
+			<version>${twirl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.jknack</groupId>
+			<artifactId>handlebars-jackson2</artifactId>
+			<version>${hbs.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.rythmengine</groupId>
