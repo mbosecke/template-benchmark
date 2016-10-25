@@ -12,25 +12,27 @@ import org.openjdk.jmh.annotations.Setup;
 
 public class Velocity extends BaseBenchmark {
 
-	VelocityEngine engine = null;
+    private VelocityContext context;
 
-	@Setup
-	public void setup() {
-		Properties configuration = new Properties();
-		configuration.setProperty("resource.loader", "class");
-		configuration.setProperty("class.resource.loader.class",
-				"org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
+    private Template template;
 
-		engine = new VelocityEngine(configuration);
-	}
+    @Setup
+    public void setup() {
+        Properties configuration = new Properties();
+        configuration.setProperty("resource.loader", "class");
+        configuration.setProperty("class.resource.loader.class",
+                "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
 
-	@Benchmark
-	public String benchmark() {
-		VelocityContext context = new VelocityContext(getContext());
-		Template template = engine.getTemplate("templates/stocks.velocity.html", "UTF-8");
-		Writer writer = new StringWriter();
-		template.merge(context, writer);
-		return writer.toString();
-	}
+        VelocityEngine engine = new VelocityEngine(configuration);
+        context = new VelocityContext(getContext());
+        template = engine.getTemplate("templates/stocks.velocity.html", "UTF-8");
+    }
+
+    @Benchmark
+    public String benchmark() {
+        Writer writer = new StringWriter();
+        template.merge(context, writer);
+        return writer.toString();
+    }
 
 }

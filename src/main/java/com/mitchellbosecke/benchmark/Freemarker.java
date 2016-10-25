@@ -15,19 +15,22 @@ import freemarker.template.TemplateException;
 
 public class Freemarker extends BaseBenchmark {
 
-Configuration configuration ;
+    private Map<String, Object> context;
+
+    private Template template;
 
     @Setup
     public void setup() throws IOException {
-         configuration = new Configuration(Configuration.VERSION_2_3_22);
+        Configuration configuration = new Configuration(Configuration.VERSION_2_3_22);
         configuration.setTemplateLoader(new ClassTemplateLoader(getClass(), "/"));
-       
+        template = configuration.getTemplate("templates/stocks.freemarker.html");
+        this.context = getContext();
     }
 
     @Benchmark
     public String benchmark() throws TemplateException, IOException {
         Writer writer = new StringWriter();
-        Template template = configuration.getTemplate("templates/stocks.freemarker.html"); template.process(getContext(), writer);
+        template.process(context, writer);
         return writer.toString();
     }
 
