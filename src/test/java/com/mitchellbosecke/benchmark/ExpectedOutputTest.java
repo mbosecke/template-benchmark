@@ -11,6 +11,9 @@ import java.text.ParseException;
 import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
+import com.hubspot.jinjava.*;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 /**
  *
@@ -129,6 +132,13 @@ public class ExpectedOutputTest {
         Twirl twirl = new Twirl();
         twirl.setup();
         assertOutput(twirl.benchmark());
+    }
+
+    @Test
+    public void testJinjavaOutput() throws IOException {
+        Jinjava jinjava = new Jinjava();
+        jinjava.setup();
+        assertOutput(jinjava.benchmark());
     }
 
     private void assertOutput(final String output) throws IOException {
