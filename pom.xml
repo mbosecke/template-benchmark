@@ -27,6 +27,7 @@
 		<httl.version>1.0.11</httl.version>
 		<chunk.version>3.2.3</chunk.version>
 		<twirl.version>1.1.1</twirl.version>
+                <moshas.version>0.1.0-SNAPSHOT</moshas.version>
 	</properties>
 
 	<licenses>
@@ -206,6 +207,11 @@
 			<artifactId>trimou-core</artifactId>
 			<version>${trimou.version}</version>
 		</dependency>
+                <dependency>
+                    <groupId>net.unit8.moshas</groupId>
+                    <artifactId>moshas</artifactId>
+                    <version>${moshas.version}</version>
+                </dependency>
 		<dependency>
 			<groupId>com.github.jknack</groupId>
 			<artifactId>handlebars</artifactId>
