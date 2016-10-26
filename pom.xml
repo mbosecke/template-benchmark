@@ -15,23 +15,23 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jmh.version>1.12</jmh.version>
+		<jmh.version>1.15</jmh.version>
 		<uberjar.name>benchmarks</uberjar.name>
 
-		<pebble.version>2.2.2</pebble.version>
-		<mustache.version>0.9.2</mustache.version>
+		<pebble.version>2.2.3</pebble.version>
+		<mustache.version>0.9.4</mustache.version>
 		<freemarker.version>2.3.23</freemarker.version>
 		<velocity.version>1.7</velocity.version>
-		<thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
 		<junit.version>4.12</junit.version>
-		<trimou.version>2.0.1.Final</trimou.version>
-		<hbs.version>4.0.5</hbs.version>
-		<rocker.version>0.12.0</rocker.version>
-		<rythm.version>1.0.1</rythm.version>
+		<trimou.version>2.1.0.Final</trimou.version>
+		<hbs.version>4.0.6</hbs.version>
+		<rocker.version>0.13.1</rocker.version>
+		<rythm.version>1.1.5</rythm.version>
 		<httl.version>1.0.11</httl.version>
 		<chunk.version>3.2.3</chunk.version>
 		<moshas.version>0.2.0</moshas.version>
-		<jinjava.version>2.1.0</jinjava.version>
+		<jinjava.version>2.1.12</jinjava.version>
 		<beetl.version>2.5.3</beetl.version>
 	</properties>
 
@@ -55,7 +55,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.5.1</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -81,7 +81,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.4.2</version>
+				<version>2.4.3</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -147,6 +147,12 @@
 			<version>${jmh.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.21</version>
+			<scope>test</scope>
+		</dependency>
 
 		<!-- template engines -->
 		<dependency>
@@ -198,11 +204,6 @@
 			<groupId>org.rythmengine</groupId>
 			<artifactId>rythm-engine</artifactId>
 			<version>${rythm.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jdt.core.compiler</groupId>
-			<artifactId>ecj</artifactId>
-			<version>4.6.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.httl</groupId>
