@@ -33,6 +33,7 @@
 		<moshas.version>0.2.0</moshas.version>
 		<jinjava.version>2.1.12</jinjava.version>
 		<beetl.version>2.5.3</beetl.version>
+		<jetg.version>1.0.0</jetg.version>
 	</properties>
 
 	<licenses>
@@ -194,6 +195,11 @@
 			<groupId>com.fizzed</groupId>
 			<artifactId>rocker-runtime</artifactId>
 			<version>${rocker.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dyuproject.jetg</groupId>
+			<artifactId>jetg</artifactId>
+			<version>${jetg.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.hubspot.jinjava</groupId>

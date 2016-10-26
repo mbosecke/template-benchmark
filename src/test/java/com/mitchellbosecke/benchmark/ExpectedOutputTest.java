@@ -82,6 +82,13 @@ public class ExpectedOutputTest {
         hbs.setup();
         assertOutput(hbs.benchmark());
     }
+    
+    @Test
+    public void testJetgOutput() throws IOException, PebbleException {
+        Jetg jetg = new Jetg();
+        jetg.setup();
+        assertOutput(jetg.benchmark());
+    }
 
     @Test
     public void testBeetl() throws IOException {
