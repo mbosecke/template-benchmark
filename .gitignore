@@ -6,3 +6,9 @@ target/
 *.war
 *.ear
 .project
+.idea/
+.idea_modules/
+*.iml
+/target/
+/BenchmarkList
+/CompilerHints
