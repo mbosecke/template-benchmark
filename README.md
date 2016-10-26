@@ -3,10 +3,13 @@ template-benchmark
 
 JMH benchmark for popular Java template engines:
 
+* [Beetl](http://ibeetl.com/guide/beetl.html)
 * [Chunk Templates](http://www.x5software.com/chunk/examples/ChunkExample)
 * [Freemarker](http://freemarker.org/)
 * [Handlebars](https://github.com/jknack/handlebars.java)
 * [HTTL](http://httl.github.io/en/)
+* [Jetg](https://github.com/fbsgen/jetg/)
+* [JinJava](https://github.com/HubSpot/jinjava)
 * [Mustache](https://github.com/spullara/mustache.java)
 * [Pebble](http://www.mitchellbosecke.com/pebble)
 * [Rocker](https://github.com/fizzed/rocker)
@@ -14,7 +17,6 @@ JMH benchmark for popular Java template engines:
 * [Thymeleaf](http://www.thymeleaf.org/)
 * [Trimou](http://trimou.org/)
 * [Velocity](http://velocity.apache.org/)
-* [Jetg](https://github.com/fbsgen/jetg/)
 
 Running the benchmark
 ======================
