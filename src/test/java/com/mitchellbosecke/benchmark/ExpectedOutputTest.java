@@ -81,8 +81,17 @@ public class ExpectedOutputTest {
         assertOutput(hbs.benchmark());
     }
 
+    @Test
+    public void testHtmlFlowOutput() throws IOException {
+        HtmlFlow hf = new HtmlFlow();
+        hf.setup();
+        assertOutput(hf.benchmark());
+    }
+
     private void assertOutput(final String output) throws IOException {
-        assertEquals(readExpectedOutputResource(), output.replaceAll("\\s", ""));
+        assertEquals(
+            readExpectedOutputResource().toLowerCase(),
+            output.replaceAll("\\s", "").toLowerCase());
     }
 
     private String readExpectedOutputResource() throws IOException {
