@@ -81,6 +81,13 @@ public class ExpectedOutputTest {
         assertOutput(hbs.benchmark());
     }
 
+    @Test
+    public void testJtwigOutput() throws Exception {
+        JTwig jTwig = new JTwig();
+        jTwig.setup();
+        assertOutput(jTwig.benchmark());
+    }
+
     private void assertOutput(final String output) throws IOException {
         assertEquals(readExpectedOutputResource(), output.replaceAll("\\s", ""));
     }

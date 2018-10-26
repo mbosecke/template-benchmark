@@ -43,30 +43,39 @@
 
 	<table>
 		<thead>
-			<tr>
-				<th>#</th>
-				<th>symbol</th>
-				<th>name</th>
-				<th>price</th>
-				<th>change</th>
-				<th>ratio</th>
-			</tr>
+	    	<tr>
+     			<th>#</th>
+     			<th>symbol</th>
+     			<th>name</th>
+     			<th>price</th>
+     			<th>change</th>
+     			<th>ratio</th>
+    		</tr>
 		</thead>
 		<tbody>
-<!--/* Note that itemStat.odd works with index (starting with 0) whereas itemStat.count is starting with 1 */-->
-			<tr th:each="item: ${items}"
-				th:class="${itemStat.odd}? 'odd' : 'even'">
-				<td th:utext="${itemStat.count}"></td>
-				<td><a th:href="${'/stocks/' + item.symbol}"
-					th:utext="${item.symbol}"></a></td>
-				<td><a th:href="${item.url}" th:utext="${item.name}"></a></td>
-				<td><strong th:utext="${item.price}"></strong></td>
-				<td th:utext="${item.change}"
-					th:class="${item.change lt 0} ? 'minus'"></td>
-				<td th:utext="${item.ratio}"
-					th:class="${item.change lt 0} ? 'minus'"></td>
+		{% for item in items -%}
+			{% set klass = (loop.index % 2 == 0) ? "even" : "odd" %}
+			<tr class="{{ klass }}">
+				<td>{{ loop.index }}</td>
+			    <td>
+			    	<a href="/stocks/{{ item.symbol }}">{{ item.symbol }}</a>
+			    </td>
+			    <td>
+			    	<a href="{{ item.url }}">{{ item.name }}</a>
+			    </td>
+			    <td>
+			    	<strong>{{ item.price }}</strong>
+			    </td>
+				{% if (item.change < 0.0) %}
+			    	<td class="minus">{{ item.change }}</td>
+			    	<td class="minus">{{ item.ratio }}</td>
+			    {% else %}
+			    	<td>{{ item.change }}</td>
+			    	<td>{{ item.ratio }}</td>
+			    {% endif %}
 			</tr>
-		</tbody>
+		{% endfor -%}
+   		</tbody>
 	</table>
 
 </body>
