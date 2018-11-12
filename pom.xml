@@ -18,7 +18,7 @@
 		<mustache.version>0.9.1</mustache.version>
 		<freemarker.version>2.3.23</freemarker.version>
 		<velocity.version>1.7</velocity.version>
-		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
 		<junit.version>4.12</junit.version>
 		<trimou.version>1.8.2.Final</trimou.version>
 		<hbs.version>4.0.1</hbs.version>
@@ -101,7 +101,15 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
 	</build>
 
 	<dependencies>
@@ -159,6 +167,11 @@
             <groupId>com.fizzed</groupId>
             <artifactId>rocker-runtime</artifactId>
             <version>${rocker.version}</version>
+        </dependency>
+		<dependency>
+            <groupId>com.github.xmlet</groupId>
+            <artifactId>htmlflow</artifactId>
+            <version>3.2</version>
         </dependency>
 
 		<dependency>

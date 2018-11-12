@@ -5,11 +5,11 @@
 <html>
 <head>
 <title>Stock Prices</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<link rel="shortcut icon" href="/images/favicon.ico" />
-<link rel="stylesheet" type="text/css" href="/css/style.css" media="all" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
 <script type="text/javascript" src="/js/util.js"></script>
 <style type="text/css">
 /*<![CDATA[*/
