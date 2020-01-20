@@ -11,18 +11,20 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jmh.version>1.11.2</jmh.version>
+		<jmh.version>1.22</jmh.version>
 		<uberjar.name>benchmarks</uberjar.name>
 
-		<pebble.version>2.2.0</pebble.version>
-		<mustache.version>0.9.1</mustache.version>
-		<freemarker.version>2.3.23</freemarker.version>
+		<pebble.version>2.4.0</pebble.version>
+		<mustache.version>0.9.6</mustache.version>
+		<freemarker.version>2.3.29</freemarker.version>
 		<velocity.version>1.7</velocity.version>
-		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version> 
 		<junit.version>4.12</junit.version>
-		<trimou.version>1.8.2.Final</trimou.version>
-		<hbs.version>4.0.1</hbs.version>
-		<rocker.version>0.10.3</rocker.version>
+		<trimou.version>2.5.0.Final</trimou.version>
+		<hbs.version>4.1.2</hbs.version>
+		<rocker.version>1.2.2</rocker.version>
+
+
 	</properties>
 
 	<licenses>
@@ -45,10 +47,10 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.8.1</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
             <plugin>
