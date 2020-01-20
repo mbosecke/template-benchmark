@@ -14,7 +14,7 @@
 		<jmh.version>1.22</jmh.version>
 		<uberjar.name>benchmarks</uberjar.name>
 
-		<pebble.version>2.4.0</pebble.version>
+		<pebble.version>3.1.2</pebble.version>
 		<mustache.version>0.9.6</mustache.version>
 		<freemarker.version>2.3.29</freemarker.version>
 		<velocity.version>1.7</velocity.version>
@@ -123,7 +123,7 @@
 
 		<!-- template engines -->
 		<dependency>
-			<groupId>com.mitchellbosecke</groupId>
+			<groupId>io.pebbletemplates</groupId>
 			<artifactId>pebble</artifactId>
 			<version>${pebble.version}</version>
 		</dependency>
