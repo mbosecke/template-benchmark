@@ -14,14 +14,14 @@
 		<jmh.version>1.11.2</jmh.version>
 		<uberjar.name>benchmarks</uberjar.name>
 
-		<pebble.version>2.2.0</pebble.version>
-		<mustache.version>0.9.1</mustache.version>
-		<freemarker.version>2.3.23</freemarker.version>
+		<pebble.version>2.4.0</pebble.version>
+		<mustache.version>0.9.6</mustache.version>
+		<freemarker.version>2.3.30</freemarker.version>
 		<velocity.version>1.7</velocity.version>
-		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
 		<junit.version>4.12</junit.version>
-		<trimou.version>1.8.2.Final</trimou.version>
-		<hbs.version>4.0.1</hbs.version>
+		<trimou.version>2.5.0.Final</trimou.version>
+		<hbs.version>4.2.0</hbs.version>
 		<rocker.version>0.10.3</rocker.version>
 	</properties>
 
