@@ -54,9 +54,9 @@
 		</thead>
 		<tbody>
 		#foreach($item in $items)
-			#if($velocityCount % 2 == 0) #set($klass = "even") #else #set($klass = "odd") #end
+			#if($foreach.count % 2 == 0) #set($klass = "even") #else #set($klass = "odd") #end
 			<tr class="${klass}">
-				<td>${velocityCount}</td>
+				<td>${foreach.count}</td>
 			    <td>
 			    	<a href="/stocks/${item.symbol}">${item.symbol}</a>
 			    </td>

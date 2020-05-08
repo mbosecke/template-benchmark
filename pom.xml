@@ -17,12 +17,12 @@
 		<pebble.version>2.4.0</pebble.version>
 		<mustache.version>0.9.6</mustache.version>
 		<freemarker.version>2.3.30</freemarker.version>
-		<velocity.version>1.7</velocity.version>
+		<velocity.version>2.2</velocity.version>
 		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
 		<junit.version>4.12</junit.version>
 		<trimou.version>2.5.0.Final</trimou.version>
 		<hbs.version>4.2.0</hbs.version>
-		<rocker.version>0.10.3</rocker.version>
+		<rocker.version>1.2.3</rocker.version>
 	</properties>
 
 	<licenses>
@@ -137,7 +137,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
-			<artifactId>velocity</artifactId>
+			<artifactId>velocity-engine-core</artifactId>
 			<version>${velocity.version}</version>
 		</dependency>
 		<dependency>
